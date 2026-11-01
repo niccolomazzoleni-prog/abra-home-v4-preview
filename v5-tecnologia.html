@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Fleet Control | Gestione di flotte di quadrupedi</title>
-<meta content="Piattaforma no-code per la gestione di quadrupedi Unitree: visione, controllo nello spazio e gestione agentica in un'unica dashboard." name="description"/>
+<title>Tecnologia Abra | Software per robot umanoidi e quadrupedi</title>
+<meta content="Lo stack software Abra per simulare, sviluppare e gestire robot umanoidi e quadrupedi: Cell Simulator, Humanoid Studio e Fleet Control." name="description"/>
 <meta name="robots" content="noindex"/>
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -893,6 +893,23 @@ section.pad-full{padding-top:120px!important}
 .site-foot a{color:var(--soft)}
 @media (max-width:900px){.info-grid,.info-grid.two,.sw-bridge{grid-template-columns:1fr}.demo{aspect-ratio:auto;padding:24px 16px 64px}.demo-track{grid-template-columns:1fr 1fr;width:100%}}
 @media (max-width:480px){.demo-track{grid-template-columns:1fr}}
+
+/* V5: tono istituzionale, prova sociale, scenario */
+.eyebrow{display:none}
+.proof{padding:36px 0;border-bottom:1px solid var(--line)}
+.proof .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:16px 36px}
+.proof-label{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.proof-list{display:flex;align-items:center;flex-wrap:wrap;gap:12px 32px;font-size:15px;font-weight:500;letter-spacing:-.01em;color:var(--soft)}
+.proof-list img{height:20px;width:auto;display:block;filter:var(--logo-filter)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.stat b{font-size:clamp(30px,3vw,38px);font-weight:400;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat p{font-size:14px;line-height:1.45;color:var(--soft);flex:1}
+.stat a{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.scenario-note{margin-top:32px;max-width:720px;font-size:16px;line-height:1.55;color:var(--soft)}
+#scenario,.h2-spaced{}
+@media (max-width:1000px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.stat-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -919,14 +936,14 @@ section.pad-full{padding-top:120px!important}
 </svg>
 
 <header class="hero hero-sub force-dark">
-  <div class="hero-media" aria-hidden="true"><div class="hv hv-a" style="background-image:url(images/official/unitree-a2-buio.webp)"></div></div>
+  <div class="hero-media" aria-hidden="true"><div class="hv hv-a" style="background-image:url(images/official/unitree-g1-ufficio.webp)"></div></div>
   <nav class="nav" aria-label="Principale">
     <div class="wrap">
       <a class="logo" href="index.html"><img src="images/logo.webp" alt="Abra Robotics" width="96" height="30"/></a>
       <div class="nav-links">
         <a href="index.html#servizi">Servizi</a>
         <a href="index.html#metodo">Metodo</a>
-        <a href="v4-tecnologia.html">Tecnologia</a>
+        <a href="v5-tecnologia.html">Tecnologia</a>
         <a href="index.html#applicazioni">Applicazioni</a>
         <a href="index.html#catalogo">Robot e prezzi</a>
       </div>
@@ -936,58 +953,41 @@ section.pad-full{padding-top:120px!important}
         <svg class="sun" viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M13 3l-1.4 1.4M4.4 11.6 3 13" stroke="currentColor"/></svg>
       </button>
       <div class="nav-cta btn-group">
-        <a class="btn btn-light" href="#contatti">Parliamo del tuo progetto <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-light" href="#contatti">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a>
       </div>
       </div>
     </div>
   </nav>
   <div class="hero-inner"><div class="wrap"><div>
-    <p class="hero-kicker">Fleet Control · Flotte di quadrupedi</p>
-    <h1>Visione, controllo e gestione agentica dei quadrupedi Unitree <span class="grad">in un'unica dashboard.</span></h1>
-    <p>Per aziende che usano quadrupedi per ispezione, sicurezza e monitoraggio di siti: una piattaforma no-code già integrata.</p>
+    <p class="hero-kicker">Tecnologia Abra</p>
+    <h1>Il software con cui portiamo umanoidi e quadrupedi <span class="grad">dalla simulazione al campo.</span></h1>
+    <p>Tre strumenti sviluppati da Abra per valutare un progetto, costruire un POC e gestire i robot.</p>
     <div class="btn-group">
-      <a class="btn btn-light" href="#contatti">Parliamo della tua flotta <svg><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost" href="#come">Come funziona <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-light" href="#contatti">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#stack">Vedi lo stack <svg><use href="#i-arrow"/></svg></a>
     </div>
   </div></div></div>
 </header>
-<p class="draft-flag" role="note">Bozza V4: in giallo i punti da confermare</p>
+<p class="draft-flag" role="note">Bozza V5: in giallo i punti da confermare</p>
 <main>
-<section id="come" class="pad-full"><div class="wrap">
-    <div class="eyebrow reveal">Come funziona</div>
-    <h2 class="h2 reveal" style="max-width:720px">Collegate i robot, <span class="grad">gestite le attività.</span></h2>
+<section id="perche" class="pad-full"><div class="wrap">
+    <h2 class="h2 reveal" style="max-width:720px">Tra un robot consegnato e un robot al lavoro <span class="grad">c'è molto sviluppo.</span></h2>
+    <p class="lead reveal">I robot di nuova generazione si possono acquistare con relativa facilità. Per arrivare a un compito reale servono simulazione, visione, manipolazione, controllo e integrazione. Abra ha sviluppato gli strumenti per affrontare questa parte su ogni progetto.</p>
+    <div class="info-grid reveal"><div class="info-card"><h3>Si decide prima</h3><p>Fattibilità e costi si valutano in simulazione, prima di approvare l'investimento.</p></div><div class="info-card"><h3>Si arriva prima al POC</h3><p>Il lavoro parte da integrazioni e pipeline esistenti, invece che da zero.</p></div><div class="info-card"><h3>Si continua dopo il POC</h3><p>I robot si gestiscono da una dashboard, anche senza un team dedicato alla programmazione.</p></div></div>
+  </div></section>
+<section id="stack" class="sec-light pad-full"><div class="wrap">
+    <h2 class="h2 reveal" style="max-width:720px">Tre software, <span class="grad">collegati alle fasi del metodo.</span></h2>
     
-    <div class="how"><div class="f-visual reveal" style="--img:url(images/official/unitree-a2-buio.webp);aspect-ratio:500/370"><div class="mock"><div class="mock-head"><span>Fleet Control</span><span>Illustrativo</span></div><svg class="draw" viewBox="0 0 280 92" fill="none" stroke="currentColor" aria-hidden="true"><rect x="1" y="1" width="278" height="90" rx="6"/><path d="M92 1v38h46M190 91V52h89M1 58h52"/><path d="M26 76c24-38 66-8 92-24s38-22 76-2 44 8 62-12" stroke-dasharray="3 4"/><circle cx="70" cy="58" r="5" fill="currentColor"/><circle cx="168" cy="38" r="5" fill="currentColor"/><circle cx="236" cy="48" r="5"/></svg><div class="mock-row"><span>Go2 · Area nord</span><b>In ispezione</b></div><div class="mock-row"><span>B2 · Perimetro</span><b>In movimento</b></div></div></div><ol class="steps steps-static reveal"><li class="step on"><h3><svg><use href="#i-truck"/></svg>1 · Collegate i quadrupedi</h3><p>La piattaforma è già integrata con i quadrupedi Unitree: non c'è integrazione da costruire.</p></li><li class="step on"><h3><svg><use href="#i-img"/></svg>2 · Controllate spazio e visione</h3><p>Vedete cosa vede il robot e controllate la flotta nello spazio.</p></li><li class="step on"><h3><svg><use href="#i-spark"/></svg>3 · Assegnate le attività</h3><p>Gestione agentica di uno o più robot da un'unica dashboard, senza scrivere codice.</p></li></ol></div>
+    <div class="map-table reveal"><table><thead><tr><th>Software</th><th>Domanda a cui risponde</th><th>Fase del metodo</th><th>Per chi</th></tr></thead><tbody>
+ <tr><td><a href="v5-cell-simulator.html">Cell Simulator</a></td><td>Si può fare e quanto costa?</td><td>Analisi di fattibilità e simulazione</td><td>Innovation manager e reparti sviluppo</td></tr>
+ <tr><td><a href="v5-humanoid-studio.html">Humanoid Studio</a></td><td>Come arriviamo a un POC su un umanoide?</td><td>Dal virtuale al reale</td><td>Team R&amp;D e reparti innovazione</td></tr>
+ <tr><td><a href="v5-fleet-control.html">Fleet Control</a></td><td>Come gestiamo i quadrupedi ogni giorno?</td><td>Progetto pilota e uso operativo</td><td>Ispezione, sicurezza e monitoraggio di siti</td></tr>
+ </tbody></table></div>
   </div></section>
-<section id="risultato" class="sec-light pad-full"><div class="wrap">
-    <div class="eyebrow reveal">Per quali attività</div>
-    <h2 class="h2 reveal" style="max-width:720px">Pensato per chi presidia <span class="grad">siti e impianti.</span></h2>
-    <p class="lead reveal"><span class="tbc" title="Indicare solo applicazioni già provate o dichiarare che sono esempi">Casi reali da confermare</span></p>
-    <div class="info-grid reveal"><div class="info-card"><h3>Ispezione</h3><p>Giri programmati su impianti e aree tecniche, con raccolta di immagini.</p></div><div class="info-card"><h3>Sicurezza</h3><p>Pattugliamento di perimetri e aree sensibili.</p></div><div class="info-card"><h3>Monitoraggio di siti</h3><p>Controllo periodico di siti estesi o difficili da presidiare.</p></div></div>
-  </div></section>
-<section id="compatibilita" class="pad-full"><div class="wrap">
-    <div class="eyebrow reveal">Compatibilità</div>
-    <h2 class="h2 reveal" style="max-width:720px">Quadrupedi <span class="grad">supportati.</span></h2>
-    <p class="lead reveal"><span class="tbc" title="Il pitch dice tutti i quadrupedi Unitree">Verificare modello per modello</span></p>
-    <div class="robot-pills reveal"><a href="https://abrarobotics.com/go2.html" target="_blank" rel="noopener">Unitree Go2</a><a href="https://abrarobotics.com/as2.html" target="_blank" rel="noopener">Unitree AS2</a><a href="https://abrarobotics.com/a2.html" target="_blank" rel="noopener">Unitree A2</a><a href="https://abrarobotics.com/b2.html" target="_blank" rel="noopener">Unitree B2</a></div>
-  </div></section>
-<section id="stato" class="sec-light pad-full"><div class="wrap">
-    <div class="eyebrow reveal">Stato di sviluppo</div>
-    <h2 class="h2 reveal" style="max-width:720px">Cosa è disponibile <span class="grad">e cosa stiamo sviluppando.</span></h2>
-    
-    <div class="info-grid two reveal"><div class="info-card"><h3>Disponibile oggi <span class="tbc" title="Fonte: pitch di Joe, non ancora verificato">Da verificare con Joe</span></h3><ul><li>Piattaforma no-code</li><li>Visione e controllo della flotta nello spazio</li><li>Gestione agentica di uno o più robot</li></ul></div><div class="info-card"><h3>In sviluppo</h3><ul><li>Roadmap da indicare con Joe</li></ul></div></div>
-  </div></section>
-<section id="domande" class="pad-full"><div class="wrap">
-    <div class="eyebrow reveal">FAQ</div>
-    <h2 class="h2 reveal" style="max-width:720px">Domande <span>frequenti</span></h2>
-    
-    <div class="faq-list reveal"><details class="faq-item"><summary>Serve un team di sviluppatori?</summary><p>No, la piattaforma è no-code. Abra affianca il vostro team nella messa in funzione.</p></details><details class="faq-item"><summary>Si può iniziare con un solo robot?</summary><p>Sì. Fleet Control gestisce uno o più robot.</p></details><details class="faq-item"><summary>Posso acquistare anche i robot da Abra?</summary><p>Sì. I quadrupedi Unitree sono nel catalogo, con prezzi e configurazioni.</p></details></div>
-  </div></section>
-<section id="altri" class="sec-light pad-full"><div class="wrap">
-    <div class="eyebrow reveal">Lo stack Abra</div>
-    <h2 class="h2 reveal" style="max-width:720px">Prima della flotta, <span class="grad">gli altri strumenti.</span></h2>
-    
-    <div class="info-grid two reveal"><div class="info-card"><h3>Cell Simulator</h3><p>Fattibilità e investimento, prima del progetto.</p><a class="more" href="v4-cell-simulator.html">Scopri Cell Simulator</a></div><div class="info-card"><h3>Humanoid Studio</h3><p>POC su umanoidi con una pipeline pronta.</p><a class="more" href="v4-humanoid-studio.html">Scopri Humanoid Studio</a></div></div>
+<section id="accesso" class="pad-full"><div class="wrap">
+    <h2 class="h2 reveal" style="max-width:720px">Dentro i progetti Abra, <span class="grad">con il supporto del team.</span></h2>
+    <p class="lead reveal">Il software è parte del metodo: lo usiamo per simulare, sviluppare e validare il caso d'uso, e affianchiamo il team del cliente durante il percorso. <span class="tbc" title="Licenza, incluso nei progetti o entrambi">Modello commerciale da definire</span></p>
+    <div class="info-grid reveal"><div class="info-card"><h3>Il metodo Abra</h3><p>Tre fasi, ciascuna con un esito chiaro prima di passare alla successiva.</p><a class="more" href="index.html#metodo">Vedi il metodo</a></div><div class="info-card"><h3>Robotics Academy</h3><p>Formazione pratica per i team che useranno e programmeranno i robot.</p><a class="more" href="index.html#servizi">Vedi i servizi</a></div><div class="info-card"><h3>Catalogo robot</h3><p>Umanoidi e quadrupedi Unitree, con prezzi e configurazioni.</p><a class="more" href="index.html#catalogo">Vedi il catalogo</a></div></div>
   </div></section>
 
 <!-- 11. Contatti -->
@@ -1001,14 +1001,13 @@ section.pad-full{padding-top:120px!important}
         <circle cx="860" cy="60" r="2.4"/><circle cx="1020" cy="110" r="1.8"/><circle cx="960" cy="300" r="2.6"/><circle cx="820" cy="350" r="1.8"/>
       </svg>
       <div class="cta-copy">
-        <div class="eyebrow">Contatti</div>
-        <h2 class="h2">Parliamo della tua <span class="grad">flotta.</span></h2>
-        <p>Raccontaci quali siti vuoi presidiare e con quali robot. Ti ricontattiamo per una prima call di 30 minuti con un tecnico Abra.</p>
+        <h2 class="h2">Un confronto tecnico <span class="grad">sugli strumenti adatti al progetto.</span></h2>
+        <p>Un tecnico Abra ricontatta l'azienda per un primo confronto su caso d'uso e requisiti.</p>
         <div class="btn-group">
-          <a class="btn btn-light" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ22FrpPdyPVRihi4eXPQlljTcG2toa8XF2d8W-QX-L9cKMaXqozq_YsHym56LEdTs9WsnqlTHeF" target="_blank" rel="noopener noreferrer">Prenota una call <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-light" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ22FrpPdyPVRihi4eXPQlljTcG2toa8XF2d8W-QX-L9cKMaXqozq_YsHym56LEdTs9WsnqlTHeF" target="_blank" rel="noopener noreferrer">Prenota un confronto <svg><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="https://abrarobotics.com/listino-unitree.html" target="_blank" rel="noopener">Richiedi un preventivo <svg><use href="#i-arrow"/></svg></a>
         </div>
-        <p class="cta-alt">Sai già quale robot ti serve? Il preventivo arriva senza avviare un progetto.</p>
+        <p class="cta-alt">Per chi ha già individuato il modello è disponibile un preventivo diretto.</p>
       </div>
       <form class="contact-form" id="contact-form">
         <div class="form-row">
@@ -1019,7 +1018,7 @@ section.pad-full{padding-top:120px!important}
           <label>Email aziendale<input name="email" placeholder="nome@azienda.it" required type="email" autocomplete="email"/></label>
           <label>Azienda<input name="azienda" placeholder="Acme S.p.A." required type="text" autocomplete="organization"/></label>
         </div>
-        <label>Da dove vuoi partire?
+        <label>Ambito di interesse
           <select name="percorso" id="percorso">
             <option value="">Seleziona</option>
             <option value="sperimentazione">Progetto di sperimentazione</option>
@@ -1029,10 +1028,10 @@ section.pad-full{padding-top:120px!important}
             <option value="non-so">Non lo so ancora</option>
           </select>
         </label>
-        <label>Cosa vorresti automatizzare?<textarea name="messaggio" id="messaggio" placeholder="Per esempio: ispezione notturna dei quadri elettrici in due capannoni." required rows="4"></textarea></label>
+        <label>Descrizione del progetto<textarea name="messaggio" id="messaggio" placeholder="Per esempio: ispezione notturna dei quadri elettrici in due capannoni." required rows="4"></textarea></label>
         <div class="form-footer">
           <button class="btn btn-light form-submit" type="submit">Invia la richiesta <svg><use href="#i-arrow"/></svg></button>
-          <p class="form-note">Ti risponde un tecnico Abra. <span class="tbc" title="Aggiungere checkbox privacy collegata alla policy">Consenso privacy da aggiungere</span></p>
+          <p class="form-note">Risponde un tecnico Abra. <span class="tbc" title="Aggiungere checkbox privacy collegata alla policy">Consenso privacy da aggiungere</span></p>
         </div>
         <div aria-live="polite" class="form-feedback" id="form-feedback"></div>
       </form>

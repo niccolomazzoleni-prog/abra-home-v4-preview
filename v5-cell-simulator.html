@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tecnologia Abra | Software per robot umanoidi e quadrupedi</title>
-<meta content="Lo stack software Abra per simulare, sviluppare e gestire robot umanoidi e quadrupedi: Cell Simulator, Humanoid Studio e Fleet Control." name="description"/>
+<title>Cell Simulator | Simulazione di isole robotizzate</title>
+<meta content="Simulazione, isola 3D con codice e stima dei costi a partire da video, CAD e immagini. Per validare un progetto robotico prima di approvarlo." name="description"/>
 <meta name="robots" content="noindex"/>
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -893,6 +893,23 @@ section.pad-full{padding-top:120px!important}
 .site-foot a{color:var(--soft)}
 @media (max-width:900px){.info-grid,.info-grid.two,.sw-bridge{grid-template-columns:1fr}.demo{aspect-ratio:auto;padding:24px 16px 64px}.demo-track{grid-template-columns:1fr 1fr;width:100%}}
 @media (max-width:480px){.demo-track{grid-template-columns:1fr}}
+
+/* V5: tono istituzionale, prova sociale, scenario */
+.eyebrow{display:none}
+.proof{padding:36px 0;border-bottom:1px solid var(--line)}
+.proof .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:16px 36px}
+.proof-label{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.proof-list{display:flex;align-items:center;flex-wrap:wrap;gap:12px 32px;font-size:15px;font-weight:500;letter-spacing:-.01em;color:var(--soft)}
+.proof-list img{height:20px;width:auto;display:block;filter:var(--logo-filter)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.stat b{font-size:clamp(30px,3vw,38px);font-weight:400;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat p{font-size:14px;line-height:1.45;color:var(--soft);flex:1}
+.stat a{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.scenario-note{margin-top:32px;max-width:720px;font-size:16px;line-height:1.55;color:var(--soft)}
+#scenario,.h2-spaced{}
+@media (max-width:1000px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.stat-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -919,14 +936,14 @@ section.pad-full{padding-top:120px!important}
 </svg>
 
 <header class="hero hero-sub force-dark">
-  <div class="hero-media" aria-hidden="true"><div class="hv hv-a" style="background-image:url(images/official/unitree-g1-ufficio.webp)"></div></div>
+  <div class="hero-media" aria-hidden="true"><div class="hv hv-a" style="background-image:url(images/hero-factory-poster.webp)"></div></div>
   <nav class="nav" aria-label="Principale">
     <div class="wrap">
       <a class="logo" href="index.html"><img src="images/logo.webp" alt="Abra Robotics" width="96" height="30"/></a>
       <div class="nav-links">
         <a href="index.html#servizi">Servizi</a>
         <a href="index.html#metodo">Metodo</a>
-        <a href="v4-tecnologia.html">Tecnologia</a>
+        <a href="v5-tecnologia.html">Tecnologia</a>
         <a href="index.html#applicazioni">Applicazioni</a>
         <a href="index.html#catalogo">Robot e prezzi</a>
       </div>
@@ -936,44 +953,52 @@ section.pad-full{padding-top:120px!important}
         <svg class="sun" viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M13 3l-1.4 1.4M4.4 11.6 3 13" stroke="currentColor"/></svg>
       </button>
       <div class="nav-cta btn-group">
-        <a class="btn btn-light" href="#contatti">Parliamo del tuo progetto <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-light" href="#contatti">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a>
       </div>
       </div>
     </div>
   </nav>
   <div class="hero-inner"><div class="wrap"><div>
-    <p class="hero-kicker">Tecnologia Abra</p>
-    <h1>Il software con cui portiamo umanoidi e quadrupedi <span class="grad">dalla simulazione al campo.</span></h1>
-    <p>Tre strumenti sviluppati da Abra per valutare un progetto, costruire un POC e gestire i robot.</p>
+    <p class="hero-kicker">Cell Simulator · Prototipazione di isole robotizzate</p>
+    <h1>Simulazione, isola 3D e stima dei costi, <span class="grad">prima di approvare il progetto.</span></h1>
+    <p>Per innovation manager e reparti sviluppo chiamati a validare un progetto: fattibilità e investimento si valutano prima di scrivere una riga di codice.</p>
     <div class="btn-group">
-      <a class="btn btn-light" href="#contatti">Parliamo del tuo progetto <svg><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost" href="#stack">Vedi lo stack <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-light" href="#contatti">Richiedi una prima valutazione <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#come">Come funziona <svg><use href="#i-arrow"/></svg></a>
     </div>
   </div></div></div>
 </header>
-<p class="draft-flag" role="note">Bozza V4: in giallo i punti da confermare</p>
+<p class="draft-flag" role="note">Bozza V5: in giallo i punti da confermare</p>
 <main>
-<section id="perche" class="pad-full"><div class="wrap">
-    <div class="eyebrow reveal">Il punto di partenza</div>
-    <h2 class="h2 reveal" style="max-width:720px">Tra un robot consegnato e un robot al lavoro <span class="grad">c'è molto sviluppo.</span></h2>
-    <p class="lead reveal">I robot di nuova generazione si possono acquistare con relativa facilità. Per arrivare a un compito reale servono simulazione, visione, manipolazione, controllo e integrazione. Abra ha sviluppato gli strumenti per affrontare questa parte su ogni progetto.</p>
-    <div class="info-grid reveal"><div class="info-card"><h3>Si decide prima</h3><p>Fattibilità e costi si valutano in simulazione, prima di approvare l'investimento.</p></div><div class="info-card"><h3>Si arriva prima al POC</h3><p>Il lavoro parte da integrazioni e pipeline esistenti, invece che da zero.</p></div><div class="info-card"><h3>Si continua dopo il POC</h3><p>I robot si gestiscono da una dashboard, anche senza un team dedicato alla programmazione.</p></div></div>
-  </div></section>
-<section id="stack" class="sec-light pad-full"><div class="wrap">
-    <div class="eyebrow reveal">Lo stack</div>
-    <h2 class="h2 reveal" style="max-width:720px">Tre software, <span class="grad">collegati alle fasi del metodo.</span></h2>
+<section id="come" class="pad-full"><div class="wrap">
+    <h2 class="h2 reveal" style="max-width:720px">Da materiale non strutturato <span class="grad">a una base per decidere.</span></h2>
     
-    <div class="map-table reveal"><table><thead><tr><th>Software</th><th>Domanda a cui risponde</th><th>Fase del metodo</th><th>Per chi</th></tr></thead><tbody>
- <tr><td><a href="v4-cell-simulator.html">Cell Simulator</a></td><td>Si può fare e quanto costa?</td><td>Analisi di fattibilità e simulazione</td><td>Innovation manager e reparti sviluppo</td></tr>
- <tr><td><a href="v4-humanoid-studio.html">Humanoid Studio</a></td><td>Come arriviamo a un POC su un umanoide?</td><td>Dal virtuale al reale</td><td>Team R&amp;D e reparti innovazione</td></tr>
- <tr><td><a href="v4-fleet-control.html">Fleet Control</a></td><td>Come gestiamo i quadrupedi ogni giorno?</td><td>Progetto pilota e uso operativo</td><td>Ispezione, sicurezza e monitoraggio di siti</td></tr>
- </tbody></table></div>
+    <div class="how"><div class="f-visual reveal" style="--img:url(images/hero-factory-poster.webp);aspect-ratio:500/370"><div class="mock"><div class="mock-head"><span>Cell Simulator</span><span>Illustrativo</span></div><svg class="draw" viewBox="0 0 280 96" fill="none" stroke="currentColor" aria-hidden="true"><path d="M10 72 88 38l92 22-78 34z"/><path d="M180 60 270 28M88 38l90-28 92 18"/><path d="M122 66V50l14-14 20 6"/><circle cx="122" cy="48" r="4"/><circle cx="136" cy="36" r="3"/><path d="M156 42v7"/><path d="M30 76l78 18M42 70l78 18" stroke-dasharray="3 3"/><rect x="60" y="58" width="16" height="9" transform="skewX(-22)"/></svg><div class="mock-row"><span>Simulazione attività</span><b>Pronta</b></div><div class="mock-row"><span>Isola 3D e codice</span><b>Pronti</b></div><div class="mock-row"><span>Stima dei costi</span><b>Pronta</b></div></div></div><ol class="steps steps-static reveal"><li class="step on"><h3><svg><use href="#i-clip"/></svg>1 · Materiale di partenza</h3><p>Video del processo, file CAD, immagini e prodotti da movimentare.</p></li><li class="step on"><h3><svg><use href="#i-img"/></svg>2 · Elaborazione dell'attività</h3><p>Riproduce il compito in una simulazione realistica con robot Unitree o Universal Robots.</p></li><li class="step on"><h3><svg><use href="#i-check"/></svg>3 · Valutazione del risultato</h3><p>Il team Abra e il cliente esaminano fattibilità, limiti e investimento necessario.</p></li></ol></div>
   </div></section>
-<section id="accesso" class="pad-full"><div class="wrap">
-    <div class="eyebrow reveal">Come si usa</div>
-    <h2 class="h2 reveal" style="max-width:720px">Dentro i progetti Abra, <span class="grad">con il supporto del team.</span></h2>
-    <p class="lead reveal">Il software è parte del metodo: lo usiamo per simulare, sviluppare e validare il vostro caso d'uso, e affianchiamo il vostro team durante il percorso. <span class="tbc" title="Licenza, incluso nei progetti o entrambi">Modello commerciale da definire</span></p>
-    <div class="info-grid reveal"><div class="info-card"><h3>Il metodo Abra</h3><p>Tre fasi, ciascuna con un esito chiaro prima di passare alla successiva.</p><a class="more" href="index.html#metodo">Vedi il metodo</a></div><div class="info-card"><h3>Robotics Academy</h3><p>Formazione pratica per i team che useranno e programmeranno i robot.</p><a class="more" href="index.html#servizi">Vedi i servizi</a></div><div class="info-card"><h3>Catalogo robot</h3><p>Umanoidi e quadrupedi Unitree, con prezzi e configurazioni.</p><a class="more" href="index.html#catalogo">Vedi il catalogo</a></div></div>
+<section id="risultato" class="sec-light pad-full"><div class="wrap">
+    <h2 class="h2 reveal" style="max-width:720px">Tre risultati <span class="grad">per portare il progetto in approvazione.</span></h2>
+    
+    <div class="info-grid reveal"><div class="info-card"><h3>Simulazione dell'attività</h3><p>Il compito riprodotto in un ambiente realistico, per vedere cosa funziona e dove emergono i limiti.</p></div><div class="info-card"><h3>Isola 3D con il codice</h3><p>Il layout della cella robotizzata e il codice di partenza per le fasi successive.</p></div><div class="info-card"><h3>Stima dei costi <span class="tbc" title="Chiedere a Joe quanto è precisa la stima">Margine di errore da indicare</span></h3><p>Un ordine di grandezza dell'investimento, da presentare al management insieme alle evidenze tecniche.</p></div></div>
+  </div></section>
+<section id="compatibilita" class="pad-full"><div class="wrap">
+    <h2 class="h2 reveal" style="max-width:720px">Robot <span class="grad">supportati.</span></h2>
+    <p class="lead reveal"><span class="tbc" title="Il pitch indica Unitree e Universal Robots senza elenco dei modelli">Modelli da elencare con Joe</span></p>
+    <div class="robot-pills reveal"><span>Unitree</span><span>Universal Robots</span></div>
+  </div></section>
+<section id="stato" class="sec-light pad-full"><div class="wrap">
+    <h2 class="h2 reveal" style="max-width:720px">Cosa è disponibile <span class="grad">e cosa stiamo sviluppando.</span></h2>
+    
+    <div class="info-grid two reveal"><div class="info-card"><h3>Disponibile oggi <span class="tbc" title="Fonte: pitch di Joe, non ancora verificato">Da verificare con Joe</span></h3><ul><li>Input da video, CAD, immagini e prodotti</li><li>Simulazione dell'attività</li><li>Isola 3D con codice</li><li>Stima dei costi</li></ul></div><div class="info-card"><h3>In sviluppo</h3><ul><li>One-prompt prototyping: elenco funzioni da indicare con Joe</li></ul></div></div>
+  </div></section>
+<section id="domande" class="pad-full"><div class="wrap">
+    <h2 class="h2 reveal" style="max-width:720px">Domande <span>frequenti</span></h2>
+    
+    <div class="faq-list reveal"><details class="faq-item"><summary>Il risultato sostituisce il test reale?</summary><p>No. La simulazione anticipa limiti e costi. Il test prosegue nel laboratorio Abra e poi nell'ambiente del cliente.</p></details><details class="faq-item"><summary>Serve scrivere codice?</summary><p>Per ottenere la prima valutazione no. Il codice generato è il punto di partenza per lo sviluppo successivo.</p></details><details class="faq-item"><summary>Che materiale serve per iniziare?</summary><p>Bastano un video del processo o un file CAD. Più il materiale è completo, più la valutazione è precisa.</p></details></div>
+  </div></section>
+<section id="altri" class="sec-light pad-full"><div class="wrap">
+    <h2 class="h2 reveal" style="max-width:720px">Dopo la valutazione, <span class="grad">gli altri strumenti.</span></h2>
+    
+    <div class="info-grid two reveal"><div class="info-card"><h3>Humanoid Studio</h3><p>POC su umanoidi con una pipeline pronta.</p><a class="more" href="v5-humanoid-studio.html">Scopri Humanoid Studio</a></div><div class="info-card"><h3>Fleet Control</h3><p>Flotte di quadrupedi in un'unica dashboard.</p><a class="more" href="v5-fleet-control.html">Scopri Fleet Control</a></div></div>
   </div></section>
 
 <!-- 11. Contatti -->
@@ -987,14 +1012,13 @@ section.pad-full{padding-top:120px!important}
         <circle cx="860" cy="60" r="2.4"/><circle cx="1020" cy="110" r="1.8"/><circle cx="960" cy="300" r="2.6"/><circle cx="820" cy="350" r="1.8"/>
       </svg>
       <div class="cta-copy">
-        <div class="eyebrow">Contatti</div>
-        <h2 class="h2">Vediamo quale strumento <span class="grad">serve al tuo progetto.</span></h2>
-        <p>Raccontaci cosa vorresti automatizzare. Ti ricontattiamo per una prima call di 30 minuti con un tecnico Abra.</p>
+        <h2 class="h2">Una prima valutazione <span class="grad">sul processo.</span></h2>
+        <p>Un tecnico Abra ricontatta l'azienda per verificare se il caso è adatto alla simulazione e quale materiale è necessario.</p>
         <div class="btn-group">
-          <a class="btn btn-light" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ22FrpPdyPVRihi4eXPQlljTcG2toa8XF2d8W-QX-L9cKMaXqozq_YsHym56LEdTs9WsnqlTHeF" target="_blank" rel="noopener noreferrer">Prenota una call <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-light" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ22FrpPdyPVRihi4eXPQlljTcG2toa8XF2d8W-QX-L9cKMaXqozq_YsHym56LEdTs9WsnqlTHeF" target="_blank" rel="noopener noreferrer">Prenota un confronto <svg><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="https://abrarobotics.com/listino-unitree.html" target="_blank" rel="noopener">Richiedi un preventivo <svg><use href="#i-arrow"/></svg></a>
         </div>
-        <p class="cta-alt">Sai già quale robot ti serve? Il preventivo arriva senza avviare un progetto.</p>
+        <p class="cta-alt">Per chi ha già individuato il modello è disponibile un preventivo diretto.</p>
       </div>
       <form class="contact-form" id="contact-form">
         <div class="form-row">
@@ -1005,7 +1029,7 @@ section.pad-full{padding-top:120px!important}
           <label>Email aziendale<input name="email" placeholder="nome@azienda.it" required type="email" autocomplete="email"/></label>
           <label>Azienda<input name="azienda" placeholder="Acme S.p.A." required type="text" autocomplete="organization"/></label>
         </div>
-        <label>Da dove vuoi partire?
+        <label>Ambito di interesse
           <select name="percorso" id="percorso">
             <option value="">Seleziona</option>
             <option value="sperimentazione">Progetto di sperimentazione</option>
@@ -1015,10 +1039,10 @@ section.pad-full{padding-top:120px!important}
             <option value="non-so">Non lo so ancora</option>
           </select>
         </label>
-        <label>Cosa vorresti automatizzare?<textarea name="messaggio" id="messaggio" placeholder="Per esempio: ispezione notturna dei quadri elettrici in due capannoni." required rows="4"></textarea></label>
+        <label>Descrizione del progetto<textarea name="messaggio" id="messaggio" placeholder="Per esempio: ispezione notturna dei quadri elettrici in due capannoni." required rows="4"></textarea></label>
         <div class="form-footer">
           <button class="btn btn-light form-submit" type="submit">Invia la richiesta <svg><use href="#i-arrow"/></svg></button>
-          <p class="form-note">Ti risponde un tecnico Abra. <span class="tbc" title="Aggiungere checkbox privacy collegata alla policy">Consenso privacy da aggiungere</span></p>
+          <p class="form-note">Risponde un tecnico Abra. <span class="tbc" title="Aggiungere checkbox privacy collegata alla policy">Consenso privacy da aggiungere</span></p>
         </div>
         <div aria-live="polite" class="form-feedback" id="form-feedback"></div>
       </form>
