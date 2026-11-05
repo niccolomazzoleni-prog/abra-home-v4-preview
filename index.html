@@ -1204,6 +1204,10 @@ main>section.sec-light+section.sec-light{padding-top:0!important}
 .btile.big .bphoto{background-position:50% 30%}
 .btile:nth-child(2) .bphoto{background-position:50% 62%}
 .mdl::after{background:linear-gradient(180deg,transparent 42%,rgba(0,0,0,.72) 68%,rgba(0,0,0,.93))}
+
+/* V13: settori e quadrupedi con immagini generate */
+.btile:nth-child(2) .bphoto{min-height:220px;background-position:50% 88%}
+.btile:nth-child(3) .bphoto{min-height:170px}
 </style>
 </head>
 <body>
@@ -1274,7 +1278,7 @@ main>section.sec-light+section.sec-light{padding-top:0!important}
   </div>
 </header>
 
-<p class="draft-flag" role="note">Bozza V12: in giallo i punti da confermare</p>
+<p class="draft-flag" role="note">Bozza V13: in giallo i punti da confermare</p>
 <main>
 <section class="proof" aria-label="I nostri Clienti e Partner">
   <div class="wrap">
@@ -1333,7 +1337,7 @@ main>section.sec-light+section.sec-light{padding-top:0!important}
     <p class="lead reveal">Il grado di adozione cambia in base al tipo di robot e all'applicazione. Il quadro seguente è la base con cui Abra valuta ogni caso d'uso. <span class="tbc" title="Etichette di maturità da validare">Etichette da validare con il socio tecnico.</span></p>
     <div class="bento reveal">
       <article class="btile big"><div class="bphoto" style="background-image:url(images/proposte/a-umanoidi.webp)"><b>Umanoidi</b></div><div class="bstage"><span>In uso operativo</span><div>Accoglienza, showroom e laboratori R&amp;D</div></div><div class="bstage"><span>In sperimentazione nell'industria</span><div>Movimentazione di componenti e attività in produzione<div class="names"><span>BMW</span><span>Mercedes-Benz</span></div><small>BMW a Spartanburg e Lipsia, Mercedes-Benz a Berlino. Fonti: <a href="https://www.automotiveworld.com/news/bmw-to-deploy-humanoid-robots-at-leipzig-plant/" target="_blank" rel="noopener">BMW Group, via Automotive World</a> e <a href="https://group.mercedes-benz.com/company/production/production-network/mbdfc-humanoid-robots.html" target="_blank" rel="noopener">Mercedes-Benz</a>.</small></div></div><div class="bstage"><span>In sviluppo</span><div>Compiti di linea complessi e non strutturati</div></div></article>
-      <article class="btile"><div class="bphoto" style="background-image:url(images/proposte/a-quadrupedi.webp)"><b>Quadrupedi</b></div><div class="bstage"><span>In uso operativo</span><div>Ispezione e ronde</div></div><div class="bstage"><span>In sperimentazione nell'industria</span><div>Lettura di strumenti e quadri</div></div></article>
+      <article class="btile"><div class="bphoto" style="background-image:url(images/ai/quadrupedi.webp)"><b>Quadrupedi</b></div><div class="bstage"><span>In uso operativo</span><div>Ispezione e ronde</div></div><div class="bstage"><span>In sperimentazione nell'industria</span><div>Lettura di strumenti e quadri</div></div></article>
       <article class="btile"><div class="bphoto" style="background-image:url(images/proposte/a-cobot.webp)"><b>Cobot e AMR</b></div><div class="bstage"><span>In uso operativo</span><div>Asservimento e logistica interna</div></div></article>
     </div>
     <div class="state-foot reveal"><p>Per ogni caso d'uso, un progetto pilota circoscritto verifica la fattibilità tecnica e la sostenibilità economica prima dell'investimento.</p><a class="btn btn-light" href="#contatti">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a></div>
@@ -1479,12 +1483,12 @@ main>section.sec-light+section.sec-light{padding-top:0!important}
   function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
   /* Use cases rendered as tabs */
   var AREAS=[
-    {n:'Ispezione e manutenzione',img:'images/proposte/a-ispezione.webp',d:'Giri di controllo, letture e verifiche su impianti e linee, anche nei turni senza personale.',c:[['Ispezione di impianti e linee produttive','Quadrupede','Pronto'],['Lettura di strumenti, quadri e manometri','Quadrupede','Pilota'],['Ispezione termografica','Quadrupede','Pronto'],['Ispezione di aree pericolose o confinate','Quadrupede','Pilota']]},
-    {n:'Sicurezza',img:'images/proposte/a-sicurezza.webp',d:'Ronde programmate e monitoraggio di perimetri e cantieri.',c:[['Ronde e monitoraggio perimetrale','Quadrupede','Pronto'],['Monitoraggio di cantieri','Quadrupede','Pilota']]},
-    {n:'Energia e infrastrutture',img:'images/proposte/a-energia.webp',d:'Ispezioni ripetitive su asset distribuiti e in ambienti difficili da raggiungere.',c:[['Ispezione di sottostazioni, impianti fotovoltaici, gallerie','Quadrupede','Pilota']]},
-    {n:'Logistica interna',img:'images/proposte/a-logistica.webp',d:'Movimentazione di materiali tra reparti e supporto al magazzino.',c:[['Trasporto di materiali tra reparti','AMR','Pronto'],['Picking e asservimento di magazzino','Cobot, AMR','Pilota']]},
-    {n:'Produzione',img:'images/proposte/a-produzione.webp',d:'Asservimento, manipolazione e controllo lungo la linea.',c:[['Asservimento macchine','Cobot','Pronto'],['Pick and place e pallettizzazione','Cobot','Pronto'],['Controllo qualità visivo','Cobot','Pilota'],['Assemblaggio leggero','Cobot','Pilota'],['Compiti di linea con umanoidi','Umanoide','Ricerca']]},
-    {n:'Ricerca e formazione',img:'images/proposte/a-ricerca.webp',d:'Piattaforme per laboratori R&D, università e didattica, con SDK e supporto.',c:[['Laboratori R&D e sviluppo di applicazioni','Umanoide, quadrupede','Pronto'],['Università e didattica','Umanoide, quadrupede','Pronto']]}
+    {n:'Ispezione e manutenzione',img:'images/ai/ispezione.webp',d:'Giri di controllo, letture e verifiche su impianti e linee, anche nei turni senza personale.',c:[['Ispezione di impianti e linee produttive','Quadrupede','Pronto'],['Lettura di strumenti, quadri e manometri','Quadrupede','Pilota'],['Ispezione termografica','Quadrupede','Pronto'],['Ispezione di aree pericolose o confinate','Quadrupede','Pilota']]},
+    {n:'Sicurezza',img:'images/ai/sicurezza.webp',d:'Ronde programmate e monitoraggio di perimetri e cantieri.',c:[['Ronde e monitoraggio perimetrale','Quadrupede','Pronto'],['Monitoraggio di cantieri','Quadrupede','Pilota']]},
+    {n:'Energia e infrastrutture',img:'images/ai/energia.webp',d:'Ispezioni ripetitive su asset distribuiti e in ambienti difficili da raggiungere.',c:[['Ispezione di sottostazioni, impianti fotovoltaici, gallerie','Quadrupede','Pilota']]},
+    {n:'Logistica interna',img:'images/ai/logistica.webp',d:'Movimentazione di materiali tra reparti e supporto al magazzino.',c:[['Trasporto di materiali tra reparti','AMR','Pronto'],['Picking e asservimento di magazzino','Cobot, AMR','Pilota']]},
+    {n:'Produzione',img:'images/ai/produzione.webp',d:'Asservimento, manipolazione e controllo lungo la linea.',c:[['Asservimento macchine','Cobot','Pronto'],['Pick and place e pallettizzazione','Cobot','Pronto'],['Controllo qualità visivo','Cobot','Pilota'],['Assemblaggio leggero','Cobot','Pilota'],['Compiti di linea con umanoidi','Umanoide','Ricerca']]},
+    {n:'Ricerca e formazione',img:'images/ai/ricerca.webp',d:'Piattaforme per laboratori R&D, università e didattica, con SDK e supporto.',c:[['Laboratori R&D e sviluppo di applicazioni','Umanoide, quadrupede','Pronto'],['Università e didattica','Umanoide, quadrupede','Pronto']]}
   ];
   var tabBox=document.querySelector('[data-tabs="casi"]'),panels=document.getElementById('casePanels');
   if(tabBox&&panels){
