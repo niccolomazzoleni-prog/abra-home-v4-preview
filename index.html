@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-mix="">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -959,9 +959,185 @@ section.pad-full{padding-top:120px!important}
 .sub-h{margin-top:88px;font-size:24px;font-weight:400;letter-spacing:-.02em;line-height:1.2}
 .case-stack .chip .tag{white-space:nowrap;flex:none}
 @media (max-width:860px){.state-in .state-foot{grid-template-columns:1fr}.sub-h{margin-top:64px}}
+
+/* Versione bianco e nero: sezioni alternate, nessun accento colore */
+:root[data-mix] .sec-light{--bg:#fff;--surface:#f6f6f6;--surface-2:#efefef;--line:#e4e4e4;--line-2:#cfcfcf;--muted:#5e5e5e;--dim:#767676;--soft:#2e2e2e;--h2-dim:#6f6f6f;--vis-bg:#e9e9e9;--vignette:rgba(240,240,240,.88);background:#fff;color:#0a0a0a}
+.grad,.h2 span.grad,h1 .grad,.hero .grad,.sec-light .grad{background:none!important;-webkit-text-fill-color:currentColor;color:var(--h2-dim)!important}
+.hero h1 .grad{color:#a8a8a8!important}
+main>section:not(.proof):not(#contatti){padding-top:120px!important;padding-bottom:120px!important}
+main>section#contatti{padding-top:120px!important}
+main>section.sec-light+section.sec-light{padding-top:0!important}
+#metodo .how{align-items:start}
+#collaborazione .none p{max-width:none}
+#metodo .sw-tag{margin-top:10px}
+.sec-light .step{opacity:.62}
+.sec-light .step.on{opacity:1}
+@media (max-width:640px){main>section:not(.proof):not(#contatti){padding-top:80px!important;padding-bottom:80px!important}main>section#contatti{padding-top:80px!important}main>section.sec-light+section.sec-light{padding-top:0!important}}
+
+/* V6: solo bianco e nero, gli accenti si aggiungono dopo tramite questi token */
+:root{--acc:#f5f5f5;--st-solid:#f5f5f5;--st-solid-text:#000;--st-mid:transparent;--st-mid-text:#f5f5f5}
+:root[data-mix] .sec-light{--acc:#0a0a0a;--st-solid:#0a0a0a;--st-solid-text:#fff;--st-mid:transparent;--st-mid-text:#0a0a0a}
+.hero h1 .grad{color:#a8a8a8!important}
+.btn-light,.btn-pill.btn-light,.sec-light .btn-light{box-shadow:none}
+.btn-group{border:0;box-shadow:none;background:none}
+.tbc,.sec-light .tbc,:root[data-theme="light"] .tbc{background:#fff0a8;color:#222;-webkit-text-fill-color:#222;border:0;border-radius:3px;font-size:12px;padding:2px 7px;white-space:normal}
+.proof{padding:32px 0;border-top:1px solid var(--line);border-bottom:0}
+.proof .wrap{align-items:center;gap:14px 40px}
+.proof-label{color:var(--soft);flex:0 0 auto}
+.proof-list{gap:12px 34px}
+.line-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:56px}
+.line{display:flex;flex-direction:column;min-width:0}
+.line .f-visual{aspect-ratio:4/3;border-radius:14px;margin-bottom:20px}
+.line h3{font-size:20px;font-weight:400;letter-spacing:-.015em;margin-bottom:8px}
+.line p{font-size:14.5px;line-height:1.5;color:var(--soft);flex:1}
+.go{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--acc);text-decoration:none}
+.go svg{width:10px;height:10px}.go:hover{text-decoration:underline;text-underline-offset:3px}
+.chips{width:84%;display:grid;gap:7px}
+.chips span{background:var(--glass);border:1px solid var(--line-2);border-radius:999px;padding:7px 12px;font-family:var(--mono);font-size:12px}
+.models-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:48px;border-top:1px solid var(--line-2)}
+.model{display:flex;flex-direction:column;gap:14px;padding:28px 28px 32px 0;border-right:1px solid var(--line);min-width:0}
+.model+.model{padding-left:28px}.model:last-child{border-right:0;padding-right:0}
+.depth{display:block;height:3px;background:var(--acc);margin-top:-29.5px;margin-bottom:26px}
+.model:nth-child(1) .depth{width:33%}.model:nth-child(2) .depth{width:66%}.model:nth-child(3) .depth{width:100%}
+.model h3{font-size:26px;font-weight:400;letter-spacing:-.025em;line-height:1.15}
+.model dl{display:grid;gap:12px;flex:1}
+.model dt{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:4px}
+.model dd{font-size:15px;line-height:1.5;color:var(--soft);margin:0}
+.model .btn{align-self:flex-start;white-space:normal;line-height:1.35}
+.tag{font-size:12px}
+.tag,.tag.t-pilota,.tag.t-ricerca{border-radius:3px}
+#casePanels .tag:not(.t-pilota):not(.t-ricerca),.tp-legend .tag:not(.t-pilota):not(.t-ricerca){background:var(--st-solid);color:var(--st-solid-text);border:0}
+.tag.t-pilota{background:var(--st-mid);color:var(--st-mid-text);border:1px solid var(--text)}
+.tag.t-ricerca{background:transparent;color:var(--muted);border:1px dashed var(--muted)}
+.tp-legend i{font-style:normal}
+.m-head.mid{border-top-color:var(--acc)}
+.team-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin-top:48px}
+.person{display:flex;flex-direction:column;gap:4px;min-width:0}
+.portrait{aspect-ratio:4/5;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;font-size:30px;font-weight:300;letter-spacing:-.02em;color:var(--muted);margin-bottom:10px}
+.person b{font-size:16px;font-weight:500}
+.person span{font-size:13.5px;line-height:1.35;color:var(--muted)}
+.person .tbc{margin-top:6px;align-self:flex-start}
+.person a{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--acc)}
+.note-row{margin-top:20px}
+.line .tbc,.model .tbc,.person .tbc,.note-row .tbc{margin-left:0;margin-top:8px;display:inline-block}
+.nav-links a,.nav-cta .btn{white-space:nowrap}
+.chips span{padding:6px 12px;line-height:1.25}
+.go{align-self:flex-start}
+@media (max-width:1180px){.nav-cta{display:none}}
+.site-foot{padding:40px 0 56px}
+@media (max-width:1000px){.line-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.team-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.models-grid{grid-template-columns:1fr;border-top:0}.model,.model+.model{padding:24px 0;border-right:0;border-top:1px solid var(--line-2)}.depth{margin-top:-25.5px;margin-bottom:18px}}
+@media (max-width:520px){.line-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* V7: feedback Nico. Bottoni solo nel font principale, sezioni piu ravvicinate */
+.btn,.btn-pill,.nav-links a,.tab,.quiz-opts button{font-family:var(--sans)!important;text-transform:none!important;letter-spacing:0!important}
+.btn,.btn-pill{font-size:14px;font-weight:500;padding:11px 18px;line-height:1.25}
+.nav-links a{font-size:14px}
+.tab{font-size:14px}
+.nav .wrap{align-items:center}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-right .nav-cta{margin:0;display:flex;align-items:center}
+.nav-right .theme-btn{margin:0;flex:none}
+.nav-cta .btn{padding:0 18px;height:38px;display:inline-flex;align-items:center}
+.nav-right .theme-btn{width:38px;height:38px}
+.logo img{width:150px;height:auto;display:block}
+@media (max-width:640px){.logo img{width:124px}}
+main>section:not(.proof):not(#contatti){padding-top:72px!important;padding-bottom:72px!important}
+main>section#contatti{padding-top:72px!important}
+main>section.sec-light+section.sec-light{padding-top:0!important}
+@media (max-width:640px){main>section:not(.proof):not(#contatti){padding-top:56px!important;padding-bottom:56px!important}main>section#contatti{padding-top:56px!important}main>section.sec-light+section.sec-light{padding-top:0!important}}
+.proof-logos{display:flex;flex-wrap:wrap;align-items:center;gap:18px 38px}
+.proof-logos img{display:block;width:auto;height:24px;max-width:150px;object-fit:contain;filter:brightness(0) invert(1);opacity:.88}
+.proof-logos img.tall{height:38px}
+.btn-line{background:transparent;color:var(--text);border:1px solid var(--text)}
+.btn-line:hover{background:var(--text);color:var(--bg)}
+.btn-line svg{width:10px;height:10px}
+.line .btn{align-self:flex-start;margin-top:16px;white-space:normal;text-align:left;border-radius:999px}
+.line-grid{margin-top:40px}
+.state-foot{margin-top:28px}
+/* Modelli: schede */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:36px;align-items:stretch}
+.tier{display:flex;flex-direction:column;gap:18px;padding:26px;border:1px solid var(--line-2);border-radius:14px;background:var(--surface);min-width:0}
+.tier small{font-size:13px;color:var(--muted)}
+.tier h3{font-size:28px;font-weight:400;letter-spacing:-.025em;line-height:1.1;margin-top:4px}
+.tier>p{font-size:15px;line-height:1.5;color:var(--soft)}
+.tier ul{list-style:none;display:grid;gap:10px;flex:1;padding-top:16px;border-top:1px solid var(--line-2)}
+.tier li{position:relative;padding-left:24px;font-size:14.5px;line-height:1.4}
+.tier li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:6px;border-left:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg) scale(.8)}
+.tier .btn{align-self:stretch;justify-content:center;text-align:center;border-radius:999px;white-space:normal}
+.tier.dark{background:#0a0a0a;color:#f5f5f5;border-color:#0a0a0a}
+.tier.dark small{color:#a8a8a8}.tier.dark>p{color:#cfcfcf}.tier.dark ul{border-color:#333}
+.tier.dark .btn{background:#fff;color:#000}
+/* Modelli: percorso */
+.path{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:48px;margin-top:36px}
+.path-steps{list-style:none;display:grid;gap:0}
+.path-step{position:relative;padding:0 0 34px 44px}
+.path-step::before{content:"";position:absolute;left:13px;top:6px;bottom:-6px;width:1px;background:var(--line-2)}
+.path-step:last-child::before{display:none}
+.path-dot{position:absolute;left:0;top:0;width:27px;height:27px;border-radius:50%;background:var(--text);color:var(--bg);display:grid;place-items:center;font-size:13px;font-weight:500}
+.path-step h3{font-size:24px;font-weight:400;letter-spacing:-.02em;margin-bottom:8px}
+.path-step p{font-size:15px;line-height:1.5;color:var(--soft);margin-bottom:8px;max-width:600px}
+.path-step b{font-weight:500;color:var(--text)}
+.path-step .btn{margin-top:6px;border-radius:999px}
+/* Modelli: tabella */
+.cmp-wrap{overflow-x:auto;margin-top:36px;border:1px solid var(--line-2);border-radius:14px}
+.cmp{width:100%;min-width:720px;border-collapse:collapse;font-size:14.5px;line-height:1.45}
+.cmp th,.cmp td{text-align:left;vertical-align:top;padding:16px 18px;border-bottom:1px solid var(--line)}
+.cmp tr:last-child td,.cmp tr:last-child th{border-bottom:0}
+.cmp thead th{font-size:22px;font-weight:400;letter-spacing:-.02em}
+.cmp tbody th{font-weight:400;color:var(--muted);width:150px}
+.cmp .btn{border-radius:999px;white-space:normal}
+/* Casi d'uso: bento */
+.bento{display:grid;grid-template-columns:1.25fr 1fr;grid-auto-rows:auto;gap:14px;margin-top:32px}
+.btile{border:1px solid var(--line-2);border-radius:14px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column;min-width:0}
+.btile.big{grid-row:span 2}
+.bphoto{position:relative;background:#0a0a0a center/cover;min-height:150px;flex:none;filter:grayscale(1)}
+.btile.big .bphoto{min-height:300px;flex:1}
+.bphoto b{position:absolute;left:16px;bottom:12px;color:#fff;font-size:24px;font-weight:400;letter-spacing:-.02em;text-shadow:0 1px 14px rgba(0,0,0,.7)}
+.bphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72))}
+.bphoto b{z-index:1}
+.bstage{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;padding:13px 16px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.4}
+.bstage>span{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:2px}
+.bstage .names{margin-top:8px}
+.bstage small{display:block;margin-top:8px;font-size:12.5px;color:var(--muted)}
+.bstage small a{color:inherit}
+/* Casi d'uso: board */
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px}
+.bcol{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.bcol h3{font-size:19px;font-weight:400;letter-spacing:-.015em}
+.bcol>p{font-size:13.5px;color:var(--muted);margin-bottom:6px}
+.bcard{background:var(--bg);border:1px solid var(--line-2);border-radius:9px;padding:11px 12px;font-size:14px;line-height:1.35}
+.bcard span{display:block;margin-top:5px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+/* Casi d'uso: scala */
+.ladder{margin-top:32px;border-top:1px solid var(--line-2)}
+.lrow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--line-2)}
+.lrow h3{font-size:22px;font-weight:400;letter-spacing:-.02em}
+.lbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;margin-bottom:12px}
+.lbar i{height:8px;background:var(--line-2);border-radius:2px}.lbar i.on{background:var(--text)}
+.lcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;font-size:14.5px;line-height:1.4}
+.lcols b{display:block;font-family:var(--mono);font-weight:400;font-size:12px;color:var(--muted);margin-bottom:4px}
+/* Catalogo: schede semplici */
+.cat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:32px}
+.cat-card{display:flex;flex-direction:column;border:1px solid var(--line-2);border-radius:14px;overflow:hidden;color:inherit;text-decoration:none;background:var(--surface);transition:border-color .2s;min-width:0}
+.cat-card:hover,.cat-card:focus-visible{border-color:var(--text)}
+.cat-img{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;overflow:hidden}
+.cat-img img{width:100%;height:100%;object-fit:contain;padding:12px;filter:grayscale(1)}
+.cat-img img.cover{object-fit:cover;padding:0}
+.cat-card span{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:14px;font-size:15px;line-height:1.25}
+.cat-card svg{width:10px;height:10px;flex:none}
+/* Pagina alternative */
+.alt-head{padding:56px 0 8px}
+.alt-tag{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding-top:40px;margin-top:56px;border-top:2px solid #0a0a0a;font-size:18px}
+.alt-tag:first-of-type{margin-top:24px}
+.alt-tag a{font-size:14px;color:#5e5e5e}
+.alt-tag em{font-style:normal;background:#0a0a0a;color:#fff;font-size:13px;padding:3px 8px;border-radius:3px}
+@media (max-width:1000px){.cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.path{grid-template-columns:1fr;gap:20px}}
+@media (max-width:820px){.tiers,.board{grid-template-columns:1fr}.bento{grid-template-columns:1fr}.btile.big .bphoto{min-height:220px}.lrow{grid-template-columns:1fr;gap:12px}}
+@media (max-width:520px){.cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cat-card:last-child{grid-column:span 2}.cat-card:last-child .cat-img{aspect-ratio:2/1}.bstage{grid-template-columns:1fr;gap:4px}.lcols{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-arrow" viewBox="0 0 10 10"><path d="M3.5 1.5 7 5l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
@@ -997,8 +1173,8 @@ section.pad-full{padding-top:120px!important}
       <a class="logo" href="index.html"><img src="images/logo.webp" alt="Abra Robotics" width="96" height="30"/></a>
       <div class="nav-links">
         <a href="#servizi">Servizi</a>
-        <a href="#metodo">Metodo</a>
-        <a href="v5-tecnologia.html">Tecnologia</a>
+        <a href="#collaborazione">Metodo</a>
+        <a href="#software">Tecnologia</a>
         <a href="#applicazioni">Applicazioni</a>
         <a href="#catalogo">Robot e prezzi</a>
               </div>
@@ -1018,7 +1194,7 @@ section.pad-full{padding-top:120px!important}
     <div class="wrap">
       <div>
         <h1>Il partner tecnologico per l'adozione <span class="grad">della robotica avanzata</span> nelle imprese.</h1>
-        <p>Affianchiamo i team Innovation, R&amp;D e Automazione partendo dagli obiettivi dell'azienda. Con una base software sviluppata da Abra, verifichiamo la fattibilità, simuliamo il robot in un ambiente virtuale e lo validiamo sul campo prima di ogni investimento.</p>
+        <p>Affianchiamo i team Innovation, R&amp;D e Automazione aiutandoli ad integrare la robotica industriale nei processi logistici e produttivi, un passo alla volta.</p>
         <div class="btn-group">
           <a class="btn btn-light" href="#contatti">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="#catalogo">Scopri i robot <svg><use href="#i-arrow"/></svg></a>
@@ -1028,372 +1204,126 @@ section.pad-full{padding-top:120px!important}
   </div>
 </header>
 
-<p class="draft-flag" role="note">Bozza V5: in giallo i punti da confermare</p>
+<p class="draft-flag" role="note">Bozza V7: in giallo i punti da confermare</p>
 <main>
-<section class="proof" aria-label="Tecnologie e partner">
+<section class="proof" aria-label="I nostri Clienti e Partner">
   <div class="wrap">
-    <span class="proof-label">Tecnologie e partner</span>
-    <div class="proof-list"><img src="logos/unitree.svg" alt="Unitree"/><span>Fairino</span><span>MiR</span><span>Youibot</span><span>Neura Robotics</span><span>Inspire Robots</span><span>Livox</span><span>Hesai</span></div>
-    <span class="tbc" title="Indicare solo rapporti reali e sostituire i nomi con i loghi autorizzati">Partner e loghi da autorizzare</span>
-  </div>
-</section>
-<section id="abra-oggi" class="pad-full">
-  <div class="wrap">
-    <h2 class="h2 reveal" style="max-width:820px">La robotica di ultima generazione sta entrando nelle imprese. <span class="grad">Abra lavora già su queste piattaforme.</span></h2>
-    <div class="stat-grid fact-grid reveal">
-      <div class="fact"><h3>Fornitura</h3><p>Distributore Unitree in Italia, con robot già forniti ad aziende italiane.</p><span class="tbc" title="Confermare la formulazione distributore e le consegne effettive">Da confermare</span></div>
-      <div class="fact"><h3>Formazione</h3><p>Programmi di formazione in corso presso un gruppo industriale italiano.</p><span class="tbc" title="Serve il consenso del cliente anche in forma anonima">Serve il consenso</span></div>
-      <div class="fact"><h3>Laboratorio</h3><p>Test e configurazione dei robot in un laboratorio dedicato.</p><span class="tbc" title="Indicare sede e aggiungere foto reali">Sede e foto da aggiungere</span></div>
-      <div class="fact"><h3>Software</h3><p>Strumenti sviluppati per simulare, sviluppare e gestire i robot.</p><span class="tbc" title="Verificare con Joe stato e proprietà del software">Da confermare con Joe</span></div>
+    <span class="proof-label">I nostri Clienti e Partner</span>
+    <div class="proof-logos">
+      <img src="logos/unitree.svg" alt="Unitree"/>
+      <img src="logos/fairino.svg" alt="Fairino"/>
+      <img class="tall" src="logos/mir.svg" alt="MiR"/>
+      <img src="logos/capra.png" alt="Capra Robotics"/>
+      <img src="logos/cyberwave.svg" alt="Cyberwave"/>
+      <img src="logos/ciga.png" alt="CIGA Group"/>
+      <img src="logos/eagleprojects.svg" alt="Eagleprojects"/>
     </div>
+    <span class="tbc" title="Serve il permesso di ogni azienda a comparire">Consenso da confermare</span>
   </div>
 </section>
-
-<!-- 2. Cosa facciamo -->
-<section id="servizi">
+<section id="servizi" class="sec-light pad-full">
   <div class="wrap">
-    <h2 class="h2 reveal">Quattro linee di servizio per introdurre <span class="grad">la robotica avanzata in azienda.</span></h2>
-    <p class="lead reveal">I servizi sono disponibili singolarmente o come percorso integrato.</p>
-
-    <div class="features features-4">
-      <article class="reveal">
-        <div class="f-visual" style="--img:url(images/official/unitree-g1-ufficio.webp)">
-          <div class="flow">
-            <div class="chip top">Progetto di sperimentazione</div>
-            <div class="link"></div>
-            <div class="chip"><svg><use href="#i-bars"/></svg>Analisi di fattibilità</div>
-            <div class="link"></div>
-            <div class="chip"><svg><use href="#i-img"/></svg>Digital twin</div>
-            <div class="link"></div>
-            <div class="chip"><svg><use href="#i-check"/></svg>Laboratorio Abra</div>
-          </div>
-        </div>
-        <h3 class="f-title">Progetti di sperimentazione</h3>
-        <p class="f-text">Dalla verifica di fattibilità alla validazione nell'ambiente del cliente, con il metodo Abra.</p>
-        <a class="f-link" href="#metodo">Il metodo Abra <svg><use href="#i-arrow"/></svg></a>
+    <h2 class="h2 reveal" style="max-width:760px">Dalla fornitura al software, quattro linee di servizio per portare la robotica nelle aziende.</h2>
+    <div class="line-grid">
+      <article class="line reveal">
+        <div class="f-visual" style="--img:url(images/official/unitree-g1-ufficio.webp)"></div>
+        <h3>Fornitura</h3>
+        <p>Un ampio catalogo di robot da scegliere e configurare, consegnati in massimo 6 settimane.</p>
+        <a class="btn btn-line" href="#catalogo">Visualizza il catalogo <svg><use href="#i-arrow"/></svg></a>
       </article>
-
-      <article class="reveal">
-        <div class="f-visual" style="--img:url(images/official/unitree-a2-escursione.webp)">
-          <div class="stack">
-            <div class="chip"><span><svg><use href="#i-shield"/></svg>Robot e sicurezza</span><span class="tag">Base</span></div>
-            <div class="chip"><span><svg><use href="#i-img"/></svg>Simulazione</span><span class="tag">Pratica</span></div>
-            <div class="chip"><span><svg><use href="#i-code"/></svg>Programmazione ROS 2</span><span class="tag">Avanzato</span></div>
-          </div>
-        </div>
-        <h3 class="f-title">Robotics Academy</h3>
-        <p class="f-text">Formazione per i team tecnici che useranno, programmeranno e manterranno i robot. Già attiva presso un gruppo industriale italiano. <span class="tbc" title="Consenso del cliente a essere citato anche in forma anonima">Da confermare</span></p>
-        <a class="f-link" href="#contatti" data-start="academy">Programmi di formazione <svg><use href="#i-arrow"/></svg></a>
+      <article class="line reveal">
+        <div class="f-visual" style="--img:url(images/official/unitree-a2-escursione.webp)"><div class="chips"><span>ROS 2</span><span>Digital twin</span><span>Embodied AI</span><span>Sicurezza</span></div></div>
+        <h3>Formazione</h3>
+        <p>Programmi di formazione aziendale per team interni: ROS 2, simulazione in digital twin, embodied AI e sicurezza dei sistemi robotici.</p>
+        <a class="btn btn-line" href="#contatti" data-start="academy">Scopri i programmi di formazione <svg><use href="#i-arrow"/></svg></a>
       </article>
-
-      <article class="reveal">
-        <div class="f-visual" style="--img:url(images/official/unitree-g1-dettaglio.webp)">
-          <div class="panel">
-            <div class="panel-head"><span class="avatar"></span>Roadmap di adozione</div>
-            <p>Esempio di risultato della consulenza</p>
-            <div class="row" style="margin-top:8px"><span>Casi d'uso mappati</span><b>12</b></div>
-            <div class="row"><span>Casi prioritari</span><b>3</b></div>
-            <div class="row"><span>Piattaforme candidate</span><b>2</b></div>
-            <div class="row"><span>Piano di adozione</span><b>12 mesi</b></div>
-          </div>
-        </div>
-        <h3 class="f-title">Consulenza e roadmap</h3>
-        <p class="f-text">Scouting tecnologico, casi d'uso prioritari e piano di adozione per i reparti Innovation e R&amp;D.</p>
-        <a class="f-link" href="#contatti" data-start="consulenza">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a>
+      <article class="line reveal">
+        <div class="f-visual" style="--img:url(images/official/unitree-b2-traino.webp)"></div>
+        <h3>Laboratorio</h3>
+        <p>Test e configurazione dei robot in un laboratorio dedicato.</p>
+        <a class="btn btn-line" href="#team">Scopri il laboratorio Abra <svg><use href="#i-arrow"/></svg></a>
       </article>
-
-      <article class="reveal">
-        <div class="f-visual" style="--img:url(images/official/unitree-b2-montagna.webp)">
-          <div class="panel">
-            <div class="panel-head"><span class="avatar"></span>Fornitura robot</div>
-            <p>Prezzi pubblici, IVA esclusa</p>
-            <div class="row" style="margin-top:8px"><span>Umanoidi Unitree</span><b>da 6.295 €</b></div>
-            <div class="row"><span>Quadrupedi Unitree</span><b>da 2.576 €</b></div>
-            <div class="row"><span>Cobot</span><b>da 5.448 €</b></div>
-            <div class="row"><span>AMR</span><b>da 16.999 €</b></div>
-          </div>
-        </div>
-        <h3 class="f-title">Fornitura robot</h3>
-        <p class="f-text">Umanoidi, quadrupedi, cobot e AMR, con configurazione iniziale e supporto in Italia.</p>
-        <a class="f-link" href="#catalogo">Catalogo robot <svg><use href="#i-arrow"/></svg></a>
+      <article class="line reveal">
+        <div class="f-visual" style="--img:url(images/official/unitree-g1-dettaglio.webp)"><div class="chips"><span>Cell Simulator</span><span>Humanoid Studio</span><span>Fleet Control</span></div></div>
+        <h3>Software</h3>
+        <p>Strumenti proprietari per simulare, sviluppare e gestire i robot.</p>
+        <a class="btn btn-line" href="#software">Scopri la suite software <svg><use href="#i-arrow"/></svg></a>
       </article>
     </div>
   </div>
 </section>
-
-<!-- 3. Il metodo -->
-<section id="metodo" class="sec-light pad-full">
+<section id="collaborazione" class="sec-light pad-full">
   <div class="wrap">
-    <h2 class="h2 reveal">Il metodo Abra: <span class="grad">validazione tecnica prima dell'investimento.</span></h2>
-    <p class="lead reveal">Ogni progetto attraversa tre fasi. Ciascuna si chiude con un esito chiaro e si passa alla successiva solo se i risultati lo giustificano.</p>
-
-    <div class="how">
-      <div class="f-visual reveal" style="--img:url(images/official/unitree-g1-dettaglio.webp);aspect-ratio:500/370">
-        <div class="flow">
-          <div class="chip top">Obiettivo del cliente</div>
-          <div class="link"></div>
-          <div class="chip"><svg><use href="#i-bars"/></svg>Fase 1 · Analisi di fattibilità</div>
-          <div class="link"></div>
-          <div class="chip"><svg><use href="#i-img"/></svg>Fase 2 · Simulazione in digital twin</div>
-          <div class="link"></div>
-          <div class="chip"><svg><use href="#i-check"/></svg>Fase 3 · Laboratorio, poi progetto pilota</div>
-        </div>
-      </div>
-      <ol class="steps reveal">
-        <li class="step on"><h3><svg><use href="#i-bars"/></svg>Fase 1 · Analisi di fattibilità</h3><p>Analizziamo il processo, l'ambiente operativo, i vincoli tecnici e gli obiettivi. Valutiamo quali piattaforme sono in grado di svolgere il compito e con quali limiti.</p><p class="note">Esito: valutazione motivata, piattaforma candidata, perimetro del test.</p><a class="sw-tag" href="v5-cell-simulator.html"><svg><use href="#i-cog"/></svg>Cell Simulator</a></li>
-        <li class="step"><h3><svg><use href="#i-img"/></svg>Fase 2 · Simulazione in digital twin</h3><p>Ricostruiamo l'ambiente operativo in una simulazione fisica ad alta fedeltà e facciamo eseguire il compito al robot. I limiti strutturali emergono subito: movimento, carico utile, equilibrio, spazi di manovra.</p><p class="note">Esito: evidenze tecniche prima di qualsiasi acquisto di hardware.</p><a class="sw-tag" href="v5-cell-simulator.html"><svg><use href="#i-cog"/></svg>Cell Simulator</a></li>
-        <li class="step"><h3><svg><use href="#i-check"/></svg>Fase 3 · Dal virtuale al reale</h3><p>Se la simulazione dà esito positivo, replichiamo il test nel laboratorio Abra con il robot reale. Superata questa fase, il progetto passa all'ambiente del cliente per un progetto pilota.</p><p class="note">Esito: robot validato sul caso d'uso e piano per la messa in campo.</p><div class="sw-tags"><a class="sw-tag" href="v5-humanoid-studio.html"><svg><use href="#i-cog"/></svg>Humanoid Studio</a><a class="sw-tag" href="v5-fleet-control.html"><svg><use href="#i-cog"/></svg>Fleet Control</a></div></li>
-      </ol>
-    </div>
-    <a class="btn btn-pill btn-light reveal" href="#contatti" style="margin-top:40px">Richiedi un confronto tecnico</a>
+    <h2 class="h2 reveal">Come lavorare assieme</h2>
+    <p class="lead reveal">I nostri modelli di collaborazione, dal più semplice al più strutturato.</p>
+    <div class="tiers reveal"><article class="tier"><div><small>Il più semplice</small><h3>Assessment</h3></div><p>Aziende che vogliono capire dove e come introdurre la robotica nei propri processi.</p><ul><li>Mappatura dei processi</li><li>Fattibilità di ciascun caso d’uso</li><li>Roadmap con tempi e costi indicativi</li></ul><a class="btn btn-line" href="#contatti" data-start="assessment">Richiedi un assessment</a></article><article class="tier"><div><small>Intermedio</small><h3>Affiancamento</h3></div><p>Team R&amp;D, Innovation e Automazione che vogliono sviluppare il progetto internamente e costruire competenze in azienda.</p><ul><li>Sviluppo del caso d’uso guidato da Abra</li><li>Formazione del team</li><li>Accesso ai nostri strumenti proprietari</li></ul><a class="btn btn-line" href="#contatti" data-start="affiancamento">Prenota una call con un consulente Abra</a></article><article class="tier dark"><div><small>Il più strutturato</small><h3>POC</h3></div><p>Aziende che hanno già individuato il caso d’uso e vogliono affidarne sviluppo e validazione.</p><ul><li>Sviluppo e validazione della soluzione</li><li>Simulazione in digital twin</li><li>Deployment in produzione con certificazione <span class="tbc" title="Il brief indica deployment e certificazione come non ancora dimostrati">Certificazione da validare</span></li></ul><a class="btn btn-light" href="#contatti" data-start="poc">Prenota una call con un consulente Abra</a></article></div>
   </div>
 </section>
-
-<!-- 3b. Tecnologia -->
-<section id="tecnologia" class="sec-light pad-full">
+<section id="software" class="pad-full">
   <div class="wrap">
-    <h2 class="h2 reveal" style="max-width:760px">La tecnologia Abra: ogni progetto parte da software già sviluppato <span class="grad">e integrato con i robot forniti.</span></h2>
-    <p class="lead reveal">Un robot appena consegnato non svolge ancora il compito per cui è stato acquistato. Simulazione, visione, manipolazione e controllo richiedono sviluppo prima di arrivare al caso d'uso. Abra ha già realizzato questa base, e il lavoro di progetto si concentra così sull'obiettivo dell'azienda. <span class="tbc" title="Verificare con Joe cosa è sviluppato da Abra e cosa è disponibile oggi">Proprietà e stato da confermare</span></p>
-
-    <div class="demo reveal" style="--img:url(images/hero-factory-poster.webp)">
-      <div class="demo-track">
-        <div class="demo-node"><b>Input</b><span>Video, CAD, immagini e prodotti</span></div>
-        <div class="demo-node"><b>Simulazione</b><span>L'attività riprodotta in un ambiente realistico</span></div>
-        <div class="demo-node"><b>Isola 3D</b><span>Layout della cella con il codice pronto</span></div>
-        <div class="demo-node"><b>Stima</b><span>Costi per valutare l'investimento</span></div>
-      </div>
-      <div class="demo-label"><span class="demo-play"><i></i></span>Cell Simulator <span class="tbc" title="Sostituire questo segnaposto con una registrazione reale del software">Video di 30 secondi da girare</span></div>
-    </div>
-
+    <h2 class="h2 reveal" style="max-width:760px">La suite Software Abra semplifica lo sviluppo e la validazione di applicazioni robotiche.</h2>
+    <p class="lead reveal">Simulazione, visione, manipolazione e controllo richiedono sviluppo personalizzato su ogni robot. Abra ha sviluppato una suite di strumenti per velocizzare questi processi, rendendoli allo stesso tempo più efficaci e replicabili.</p>
     <div class="features">
       <article class="reveal">
         <div class="f-visual" style="--img:url(images/hero-factory-poster.webp)"><div class="mock"><div class="mock-head"><span>Cell Simulator</span><span>Illustrativo</span></div><svg class="draw" viewBox="0 0 280 96" fill="none" stroke="currentColor" aria-hidden="true"><path d="M10 72 88 38l92 22-78 34z"/><path d="M180 60 270 28M88 38l90-28 92 18"/><path d="M122 66V50l14-14 20 6"/><circle cx="122" cy="48" r="4"/><circle cx="136" cy="36" r="3"/><path d="M156 42v7"/><path d="M30 76l78 18M42 70l78 18" stroke-dasharray="3 3"/><rect x="60" y="58" width="16" height="9" transform="skewX(-22)"/></svg><div class="mock-row"><span>Simulazione attività</span><b>Pronta</b></div><div class="mock-row"><span>Isola 3D e codice</span><b>Pronti</b></div><div class="mock-row"><span>Stima dei costi</span><b>Pronta</b></div></div></div>
         <h3 class="f-title">Cell Simulator</h3>
         <p class="f-text">Sapere se un'isola robotizzata si può realizzare e quanto costa, prima di approvare il progetto.</p>
-        <a class="f-link" href="v5-cell-simulator.html">Scopri Cell Simulator <svg><use href="#i-arrow"/></svg></a>
       </article>
       <article class="reveal">
         <div class="f-visual" style="--img:url(images/official/unitree-g1-dettaglio.webp)"><div class="mock"><div class="mock-head"><span>Humanoid Studio</span><span>Illustrativo</span></div><div class="mock-prompt">Prendi il componente dal vassoio e appoggialo sul banco</div><div class="mock-row"><span>Visione</span><b>Integrata</b></div><div class="mock-row"><span>Manipolazione</span><b>Integrata</b></div><div class="mock-row"><span>Robot</span><b>Unitree G1</b></div></div></div>
         <h3 class="f-title">Humanoid Studio</h3>
         <p class="f-text">Arrivare a un POC su G1, H2 e R1 partendo da visione e manipolazione già integrate.</p>
-        <a class="f-link" href="v5-humanoid-studio.html">Scopri Humanoid Studio <svg><use href="#i-arrow"/></svg></a>
       </article>
       <article class="reveal">
         <div class="f-visual" style="--img:url(images/official/unitree-a2-buio.webp)"><div class="mock"><div class="mock-head"><span>Fleet Control</span><span>Illustrativo</span></div><svg class="draw" viewBox="0 0 280 92" fill="none" stroke="currentColor" aria-hidden="true"><rect x="1" y="1" width="278" height="90" rx="6"/><path d="M92 1v38h46M190 91V52h89M1 58h52"/><path d="M26 76c24-38 66-8 92-24s38-22 76-2 44 8 62-12" stroke-dasharray="3 4"/><circle cx="70" cy="58" r="5" fill="currentColor"/><circle cx="168" cy="38" r="5" fill="currentColor"/><circle cx="236" cy="48" r="5"/></svg><div class="mock-row"><span>Go2 · Area nord</span><b>In ispezione</b></div><div class="mock-row"><span>B2 · Perimetro</span><b>In movimento</b></div></div></div>
         <h3 class="f-title">Fleet Control</h3>
         <p class="f-text">Gestire uno o più quadrupedi Unitree da un'unica dashboard, senza costruire l'integrazione.</p>
-        <a class="f-link" href="v5-fleet-control.html">Scopri Fleet Control <svg><use href="#i-arrow"/></svg></a>
       </article>
     </div>
   </div>
 </section>
-
-<!-- 4. Applicazioni -->
-<section id="applicazioni" class="pad-full">
+<section id="applicazioni" class="sec-light pad-full">
   <div class="wrap">
-    <h2 class="h2 reveal">I principali casi d'uso <span class="grad">della robotica di ultima generazione.</span></h2>
-    <p class="lead reveal">Il grado di adozione cambia in base al tipo di robot e all'applicazione. Il quadro seguente è la base con cui Abra valuta ogni caso d'uso. <span class="tbc" title="Etichette da validare con il socio tecnico">Da validare</span></p>
-    <div class="state-in reveal">
-    <div class="matrix">
-      <div class="m-corner"></div>
-      <div class="m-head"><b>In uso operativo</b><span>Applicazioni già impiegate dalle aziende</span></div>
-      <div class="m-head mid"><b>In sperimentazione nell'industria</b><span>Progetti attivi presso grandi gruppi</span></div>
-      <div class="m-head"><b>In sviluppo</b><span>Applicazioni in fase di ricerca e sviluppo</span></div>
-
-      <div class="m-row">Umanoidi</div>
-      <div class="m-cell" data-stage="In uso operativo">Accoglienza, showroom e laboratori R&amp;D</div>
-      <div class="m-cell mid" data-stage="In sperimentazione nell'industria">Movimentazione di componenti e attività in produzione
-        <div class="names"><span>BMW</span><span>Mercedes-Benz</span></div>
-        <small>BMW a Spartanburg e Lipsia, Mercedes-Benz a Berlino. Fonti: <a href="https://www.automotiveworld.com/news/bmw-to-deploy-humanoid-robots-at-leipzig-plant/" target="_blank" rel="noopener">BMW Group, via Automotive World</a> e <a href="https://group.mercedes-benz.com/company/production/production-network/mbdfc-humanoid-robots.html" target="_blank" rel="noopener">Mercedes-Benz</a>.</small>
-      </div>
-      <div class="m-cell" data-stage="In sviluppo">Compiti di linea complessi e non strutturati</div>
-
-      <div class="m-row">Quadrupedi</div>
-      <div class="m-cell" data-stage="In uso operativo">Ispezione e ronde</div>
-      <div class="m-cell mid" data-stage="In sperimentazione nell'industria">Lettura di strumenti e quadri</div>
-      <div class="m-cell" data-stage="In sviluppo"></div>
-
-      <div class="m-row">Cobot e AMR</div>
-      <div class="m-cell" data-stage="In uso operativo">Asservimento e logistica interna</div>
-      <div class="m-cell mid" data-stage="In sperimentazione nell'industria"></div>
-      <div class="m-cell" data-stage="In sviluppo"></div>
+    <h2 class="h2 reveal">I principali casi d'uso della robotica di ultima generazione.</h2>
+    <p class="lead reveal">Il grado di adozione cambia in base al tipo di robot e all'applicazione. Il quadro seguente è la base con cui Abra valuta ogni caso d'uso. <span class="tbc" title="Etichette di maturità da validare">Etichette da validare con il socio tecnico.</span></p>
+    <div class="bento reveal">
+      <article class="btile big"><div class="bphoto" style="background-image:url(images/official/unitree-g1-dettaglio.webp)"><b>Umanoidi</b></div><div class="bstage"><span>In uso operativo</span><div>Accoglienza, showroom e laboratori R&amp;D</div></div><div class="bstage"><span>In sperimentazione nell'industria</span><div>Movimentazione di componenti e attività in produzione<div class="names"><span>BMW</span><span>Mercedes-Benz</span></div><small>BMW a Spartanburg e Lipsia, Mercedes-Benz a Berlino. Fonti: <a href="https://www.automotiveworld.com/news/bmw-to-deploy-humanoid-robots-at-leipzig-plant/" target="_blank" rel="noopener">BMW Group, via Automotive World</a> e <a href="https://group.mercedes-benz.com/company/production/production-network/mbdfc-humanoid-robots.html" target="_blank" rel="noopener">Mercedes-Benz</a>.</small></div></div><div class="bstage"><span>In sviluppo</span><div>Compiti di linea complessi e non strutturati</div></div></article>
+      <article class="btile"><div class="bphoto" style="background-image:url(images/official/unitree-a2-buio.webp)"><b>Quadrupedi</b></div><div class="bstage"><span>In uso operativo</span><div>Ispezione e ronde</div></div><div class="bstage"><span>In sperimentazione nell'industria</span><div>Lettura di strumenti e quadri</div></div></article>
+      <article class="btile"><div class="bphoto" style="background-image:url(images/manifattura/amr/mir250-action.jpg)"><b>Cobot e AMR</b></div><div class="bstage"><span>In uso operativo</span><div>Asservimento e logistica interna</div></div></article>
     </div>
-
-    <div class="state-foot"><p>Per ogni caso d'uso, un progetto pilota circoscritto verifica la fattibilità tecnica e la sostenibilità economica prima dell'investimento.</p><a class="btn btn-light" href="#contatti">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a></div>
-    </div>
-    <h3 class="sub-h reveal">Le applicazioni per area</h3>
+    <div class="state-foot reveal"><p>Per ogni caso d'uso, un progetto pilota circoscritto verifica la fattibilità tecnica e la sostenibilità economica prima dell'investimento.</p><a class="btn btn-light" href="#contatti">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a></div>
+    <h3 class="sub-h reveal">Dove la robotica è già applicabile, settore per settore.</h3>
     <p class="lead reveal">I casi non in elenco vengono esaminati nella fase di fattibilità.</p>
     <div class="tabs reveal" role="tablist" aria-label="Aree di applicazione" data-tabs="casi"></div>
     <div id="casePanels"></div>
   </div>
 </section>
-
-<!-- 5. Valutazione -->
-<section id="valutazione" class="sec-light pad-full">
+<section id="team" class="sec-light pad-full">
   <div class="wrap">
-    <h2 class="h2 reveal">Dalla documentazione di processo <span class="grad">a una prima valutazione di fattibilità.</span></h2>
-    <div class="how">
-      <div class="f-visual reveal" style="--img:url(images/official/unitree-a2-buio.webp);aspect-ratio:500/370">
-        <form class="composer composer-live" id="askForm">
-          <label for="askInput" class="sr-only">Descrizione del processo</label>
-          <textarea id="askInput" class="ph" rows="3" placeholder="Descrizione del processo, con eventuali video, CAD e immagini. Es. asservimento di una pressa"></textarea>
-          <div class="bar">
-            <div class="tools"><span class="chip mini"><svg><use href="#i-clip"/></svg>Video o CAD</span><svg><use href="#i-clip"/></svg><svg><use href="#i-img"/></svg></div>
-            <button class="btn btn-pill btn-light" type="submit">Avvia la valutazione</button>
-          </div>
-        </form>
-      </div>
-      <ol class="steps steps-static reveal">
-        <li class="step on"><h3><svg><use href="#i-chat"/></svg>1 · Descrizione del processo</h3><p>Una breve descrizione o un video: compito, ambiente operativo e vincoli.</p></li>
-        <li class="step on"><h3><svg><use href="#i-spark"/></svg>2 · Inquadramento del progetto</h3><p>Settore, obiettivo, stato del progetto e tempistiche.</p></li>
-        <li class="step on"><h3><svg><use href="#i-check"/></svg>3 · Prima valutazione</h3><p>Per i casi idonei, simulazione e stima dei costi con Cell Simulator. Negli altri casi, indicazione del percorso più adatto. <span class="tbc" title="Verificare con Joe quanti casi si possono gestire e in quanto tempo">Offerta e tempi da confermare</span></p></li>
-      </ol>
+    <h2 class="h2 reveal">Il Team Abra</h2>
+    <p class="lead reveal">Il Team Abra è composto da ingegneri specializzati in robotica ed embodied AI, con un percorso costruito tra ricerca applicata, aziende tecnologiche e startup.</p>
+    <div class="team-grid reveal">
+      <article class="person"><div class="portrait" aria-hidden="true">GP</div><b>Giovanni Pitton</b><span>Co-Founder e CTO</span></article>
+      <article class="person"><div class="portrait" aria-hidden="true">NM</div><b>Niccolò Mazzoleni</b><span>Co-Founder e CMO</span></article>
+      <article class="person"><div class="portrait" aria-hidden="true">SC</div><b>Samuele Cigardi</b><span>Embodied AI Engineer</span></article>
+      <article class="person"><div class="portrait" aria-hidden="true">X</div><b>[Nome X]</b><span>Embodied AI Engineer</span><span class="tbc" title="Nome e profilo da confermare">Da confermare</span></article>
+      <article class="person"><div class="portrait" aria-hidden="true">Y</div><b>[Nome Y]</b><span>Field Robotics Engineer</span><span class="tbc" title="Nome e profilo da confermare">Da confermare</span></article>
     </div>
+    <p class="note-row reveal"><span class="tbc" title="Servono foto reali e URL dei profili">Foto e link LinkedIn da aggiungere</span></p>
   </div>
 </section>
-
-<!-- 6. Robot e prezzi -->
 <section id="catalogo" class="pad-full">
   <div class="wrap">
-    <h2 class="h2 reveal">Robot disponibili in Italia, <span class="grad">a prezzi pubblici.</span></h2>
-    <p class="lead reveal">Schede tecniche, versioni, prezzi e tempi di consegna. Per chi ha già individuato il modello è disponibile un preventivo diretto, senza avviare un progetto.</p>
-
-    <div class="tabs reveal" role="tablist" aria-label="Categorie" data-tabs="cat">
-      <button class="tab" role="tab" aria-selected="true" aria-controls="tp-umanoidi" id="t-umanoidi">Umanoidi</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tp-quadrupedi" id="t-quadrupedi">Quadrupedi</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tp-cobot" id="t-cobot">Cobot</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tp-amr" id="t-amr">AMR</button>
-      <button class="tab" role="tab" aria-selected="false" aria-controls="tp-accessori" id="t-accessori">Accessori</button>
-    </div>
-
-    <div class="tabpanel" role="tabpanel" id="tp-umanoidi" aria-labelledby="t-umanoidi">
-      <div class="tp-media"><img src="images/official/unitree-g1-03.webp" alt="Unitree G1" loading="lazy"/></div>
-      <div>
-        <div class="tp-label">Umanoidi</div>
-        <p class="tp-title">Unitree G1, H2, R1 e versioni dual-arm</p>
-        <div class="tp-meta"><span>da <b>6.295 €</b></span><span><b>168</b> prodotti</span></div>
-        <a class="btn btn-pill btn-light" href="https://abrarobotics.com/umanoidi.html" target="_blank" rel="noopener">Vedi prezzi</a>
-      </div>
-    </div>
-    <div class="tabpanel" role="tabpanel" id="tp-quadrupedi" aria-labelledby="t-quadrupedi" hidden>
-      <div class="tp-media"><img src="images/prodotti/2026/as2.webp" alt="Unitree AS2" loading="lazy" class="contain"/></div>
-      <div>
-        <div class="tp-label">Quadrupedi</div>
-        <p class="tp-title">Unitree Go2, AS2, A2 e B2</p>
-        <div class="tp-meta"><span>da <b>2.576 €</b></span><span><b>38</b> prodotti</span></div>
-        <a class="btn btn-pill btn-light" href="https://abrarobotics.com/quadrupedi.html" target="_blank" rel="noopener">Vedi prezzi</a>
-      </div>
-    </div>
-    <div class="tabpanel" role="tabpanel" id="tp-cobot" aria-labelledby="t-cobot" hidden>
-      <div class="tp-media"><img src="images/manifattura/fairino-fr5.webp" alt="Cobot Fairino FR5" loading="lazy" class="contain"/></div>
-      <div>
-        <div class="tp-label">Cobot</div>
-        <p class="tp-title">Bracci collaborativi Fairino, con celle chiavi in mano</p>
-        <div class="tp-meta"><span>da <b>5.448 €</b></span><span><b>9</b> prodotti</span></div>
-        <a class="btn btn-pill btn-light" href="https://abrarobotics.com/cobot.html" target="_blank" rel="noopener">Vedi prezzi</a>
-      </div>
-    </div>
-    <div class="tabpanel" role="tabpanel" id="tp-amr" aria-labelledby="t-amr" hidden>
-      <div class="tp-media"><img src="images/manifattura/amr/juno-plus.webp" alt="AMR" loading="lazy" class="contain"/></div>
-      <div>
-        <div class="tp-label">AMR</div>
-        <p class="tp-title">Robot mobili per logistica e intralogistica</p>
-        <div class="tp-meta"><span>da <b>16.999 €</b></span><span><b>16</b> prodotti</span></div>
-        <a class="btn btn-pill btn-light" href="https://abrarobotics.com/amr.html" target="_blank" rel="noopener">Vedi prezzi</a>
-      </div>
-    </div>
-    <div class="tabpanel" role="tabpanel" id="tp-accessori" aria-labelledby="t-accessori" hidden>
-      <div class="tp-media"><img src="images/prodotti/2026/revo2-touch.webp" alt="Mano robotica" loading="lazy" class="contain"/></div>
-      <div>
-        <div class="tp-label">Accessori</div>
-        <p class="tp-title">Mani, pinze, LiDAR, batterie e moduli di calcolo</p>
-        <div class="tp-meta"><span>da <b>73 €</b></span><span><b>127</b> prodotti</span></div>
-        <a class="btn btn-pill btn-light" href="https://abrarobotics.com/accessori.html" target="_blank" rel="noopener">Vedi prezzi</a>
-      </div>
-    </div>
-
-    <div class="listino reveal">
-      <div>
-        <h3>Listino prezzi completo</h3>
-        <p>Oltre 350 prodotti con prezzo pubblico IVA esclusa.</p>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>Spedizione e dazio inclusi</li>
-          <li><svg><use href="#i-check"/></svg>Consegna da 4 a 6 settimane per umanoidi e quadrupedi Unitree</li>
-          <li><svg><use href="#i-check"/></svg>Garanzia e assistenza in Italia</li>
-        </ul>
-      </div>
-      <div class="listino-cta">
-        <strong>350+</strong>
-        <a class="btn btn-pill btn-light" href="https://abrarobotics.com/listino-unitree.html" target="_blank" rel="noopener">Apri il listino prezzi</a>
-      </div>
-    </div>
-
-    <div class="models reveal">
-      <span class="tp-label">Prezzi per modello Unitree</span>
-      <div class="pills">
-        <a href="https://abrarobotics.com/g1.html" target="_blank" rel="noopener">Unitree G1</a><a href="https://abrarobotics.com/h2.html" target="_blank" rel="noopener">Unitree H2</a><a href="https://abrarobotics.com/r1.html" target="_blank" rel="noopener">Unitree R1</a><a href="https://abrarobotics.com/r1-d.html" target="_blank" rel="noopener">Unitree R1-D / R1-A</a><a href="https://abrarobotics.com/g1-d.html" target="_blank" rel="noopener">Unitree G1-D</a><a href="https://abrarobotics.com/go2.html" target="_blank" rel="noopener">Unitree Go2</a><a href="https://abrarobotics.com/as2.html" target="_blank" rel="noopener">Unitree AS2</a><a href="https://abrarobotics.com/a2.html" target="_blank" rel="noopener">Unitree A2</a><a href="https://abrarobotics.com/b2.html" target="_blank" rel="noopener">Unitree B2</a><a href="https://abrarobotics.com/z1.html" target="_blank" rel="noopener">Unitree Z1 e D1</a>
-      </div>
-    </div>
-
-    <div class="sw-bridge reveal">
-      <a href="v5-humanoid-studio.html"><strong>Per chi sviluppa su umanoidi</strong>G1, H2 e R1 sono già integrati con Humanoid Studio.</a>
-      <a href="v5-fleet-control.html"><strong>Per chi gestisce quadrupedi</strong>I quadrupedi Unitree si gestiscono da un'unica dashboard con Fleet Control.</a>
-    </div>
+    <h2 class="h2 reveal">Scopri tutti i robot disponibili.</h2>
+    <div class="cat-grid reveal"><a class="cat-card" href="https://abrarobotics.com/umanoidi.html" target="_blank" rel="noopener"><div class="cat-img"><img class="cover" src="images/official/unitree-g1-03.webp" alt="" loading="lazy"/></div><span>Scopri tutti gli umanoidi <svg><use href="#i-arrow"/></svg></span></a><a class="cat-card" href="https://abrarobotics.com/quadrupedi.html" target="_blank" rel="noopener"><div class="cat-img"><img class="" src="images/prodotti/2026/as2.webp" alt="" loading="lazy"/></div><span>Scopri tutti i quadrupedi <svg><use href="#i-arrow"/></svg></span></a><a class="cat-card" href="https://abrarobotics.com/cobot.html" target="_blank" rel="noopener"><div class="cat-img"><img class="" src="images/manifattura/fairino-fr5.webp" alt="" loading="lazy"/></div><span>Scopri tutti i cobot <svg><use href="#i-arrow"/></svg></span></a><a class="cat-card" href="https://abrarobotics.com/amr.html" target="_blank" rel="noopener"><div class="cat-img"><img class="" src="images/manifattura/amr/juno-plus.webp" alt="" loading="lazy"/></div><span>Scopri tutti gli AMR <svg><use href="#i-arrow"/></svg></span></a><a class="cat-card" href="https://abrarobotics.com/accessori.html" target="_blank" rel="noopener"><div class="cat-img"><img class="" src="images/prodotti/2026/revo2-touch.webp" alt="" loading="lazy"/></div><span>Scopri tutti gli accessori <svg><use href="#i-arrow"/></svg></span></a></div>
   </div>
 </section>
-
-<!-- 7. Abra Learn -->
-<section id="learn" class="sec-light pad-full">
-  <div class="wrap">
-    <h2 class="h2 reveal">Risorse per chi valuta <span class="grad">la robotica avanzata.</span></h2>
-    <p class="lead reveal">Guide, analisi e programmi di formazione per i team che devono scegliere, sperimentare e adottare robot in azienda.</p>
-    <div class="lab-grid">
-      <a class="b-card reveal" href="#contatti"><div class="b-icon"><svg><use href="#i-dl"/></svg></div><h3>Report 2027 <span class="tag">In arrivo</span></h3><p>La robotica avanzata nelle imprese italiane, realizzato con [ateneo]. <span class="tbc" title="Ateneo partner da definire">Da definire</span></p></a>
-      <a class="b-card reveal" href="https://abrarobotics.com/blog.html" target="_blank" rel="noopener"><div class="b-icon"><svg><use href="#i-bars"/></svg></div><h3>Guide ai robot</h3><p>Confronti tra modelli, versioni e configurazioni, aggiornati a ogni nuova uscita.</p></a>
-      <a class="b-card reveal" href="https://abrarobotics.com/manifattura-logistica.html" target="_blank" rel="noopener"><div class="b-icon"><svg><use href="#i-img"/></svg></div><h3>Guide alle applicazioni</h3><p>Cosa può fare un robot oggi, settore per settore, con limiti e prerequisiti.</p></a>
-      <a class="b-card reveal" href="#contatti" data-start="academy"><div class="b-icon"><svg><use href="#i-badge"/></svg></div><h3>Robotics Academy</h3><p>Programmi di formazione per i team aziendali, sui modelli adottati.</p></a>
-    </div>
-  </div>
-</section>
-
-
-<!-- 9. Laboratorio e caso -->
-<section id="laboratorio" class="sec-light pad-full">
-  <div class="wrap">
-    <div class="split">
-      <div>
-        <h2 class="h2 reveal">Un team tecnico <span class="grad">con un laboratorio dedicato.</span></h2>
-        <p class="lead reveal">Abra Robotics è una società italiana specializzata in robotica avanzata. Nel nostro laboratorio testiamo e configuriamo i robot prima di portarli presso i clienti. <span class="tbc" title="Città, descrizione e foto del laboratorio">Da confermare</span></p>
-        <a class="f-link reveal" href="https://abrarobotics.com/chi-siamo.html" target="_blank" rel="noopener">Chi siamo <svg><use href="#i-arrow"/></svg></a>
-      </div>
-      <div class="f-visual reveal" style="--img:url(images/official/unitree-b2-traino.webp);aspect-ratio:500/360">
-        <div class="panel">
-          <div class="panel-head"><span class="avatar"></span>Laboratorio Abra</div>
-          <p>Foto reale del team e del laboratorio da scattare</p>
-          <div class="row" style="margin-top:8px"><span>Test sim-to-real</span><b>in sede</b></div>
-          <div class="row"><span>Configurazione robot</span><b>prima della consegna</b></div>
-          <div class="row"><span>Formazione</span><b>Robotics Academy</b></div>
-        </div>
-      </div>
-    </div>
-
-    <h2 class="h2 reveal" style="margin-top:96px">Un progetto con <span class="grad">[settore]</span> <span class="tbc tbc-empty" title="Caso da riempire con consenso scritto; se non è pronto al lancio la sezione si toglie">Da riempire</span></h2>
-    <div class="case reveal">
-      <div class="case-row"><span>Il punto di partenza</span><p class="placeholder">[Da riempire: il problema del cliente, senza nomi]</p></div>
-      <div class="case-row"><span>Cosa abbiamo fatto</span><p class="placeholder">[Da riempire: fase del metodo e robot usato]</p></div>
-      <div class="case-row"><span>In quanto tempo</span><p class="placeholder">[Da riempire]</p></div>
-      <div class="case-row"><span>Cosa è cambiato</span><p class="placeholder">[Da riempire: almeno un numero, anche parziale]</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 10. FAQ -->
-<section id="faq" class="pad-full">
+<section id="faq" class="sec-light pad-full">
   <div class="wrap">
     <h2 class="h2 reveal">Domande <span>frequenti</span></h2>
     <div class="faq-list reveal">
       <details class="faq-item"><summary>Che cos'è un digital twin e a cosa serve?</summary><p>È una ricostruzione virtuale dell'ambiente operativo che riproduce la fisica del mondo reale. Ci permette di verificare se un robot può svolgere un compito prima di acquistare o spostare hardware, riducendo tempi e costi della sperimentazione.</p></details>
-      <details class="faq-item"><summary>Il software Abra è incluso nei progetti?</summary><p>Usiamo i nostri strumenti nei progetti di sperimentazione. Le modalità di accesso per i team del cliente vengono definite in base al progetto. <span class="tbc" title="Licenza, incluso nei progetti o entrambi">Modello commerciale da definire</span></p></details>
+      <details class="faq-item"><summary>Il software Abra è incluso nei progetti?</summary><p>Usiamo i nostri strumenti nei progetti di sperimentazione. Le modalità di accesso per i team del cliente vengono definite in base al progetto. <span class="tbc" title="Licenza, incluso nei progetti o entrambi">Modello commerciale da definire.</span></p></details>
       <details class="faq-item"><summary>Una simulazione è affidabile?</summary><p>La simulazione individua presto i limiti strutturali del robot, come carico utile, equilibrio e movimento. Non sostituisce il test reale: per questo ogni progetto prosegue con la validazione nel nostro laboratorio e poi nell'ambiente del cliente.</p></details>
       <details class="faq-item"><summary>È necessario avviare un progetto per acquistare un robot?</summary><p>No. Chi ha già individuato il modello riceve preventivo, configurazioni disponibili e tempi di consegna. Consegniamo il robot configurato e pronto all'uso.</p></details>
       <details class="faq-item"><summary>Quanto dura un progetto di sperimentazione?</summary><p>Dipende dal caso d'uso e dalla complessità dell'ambiente. Durata e criteri di valutazione vengono definiti al termine dell'analisi di fattibilità.</p></details>
@@ -1404,7 +1334,6 @@ section.pad-full{padding-top:120px!important}
     </div>
   </div>
 </section>
-
 <!-- 11. Contatti -->
 <section id="contatti" class="pad-full" style="padding-bottom:0">
   <div class="wrap">
@@ -1416,7 +1345,7 @@ section.pad-full{padding-top:120px!important}
         <circle cx="860" cy="60" r="2.4"/><circle cx="1020" cy="110" r="1.8"/><circle cx="960" cy="300" r="2.6"/><circle cx="820" cy="350" r="1.8"/>
       </svg>
       <div class="cta-copy">
-        <h2 class="h2">Un confronto tecnico <span class="grad">sul progetto.</span></h2>
+        <h2 class="h2">Hai bisogno di più informazioni?</h2>
         <p>Un tecnico Abra ricontatta l'azienda per un primo confronto su caso d'uso e requisiti.</p>
         <div class="btn-group">
           <a class="btn btn-light" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ22FrpPdyPVRihi4eXPQlljTcG2toa8XF2d8W-QX-L9cKMaXqozq_YsHym56LEdTs9WsnqlTHeF" target="_blank" rel="noopener noreferrer">Prenota un confronto <svg><use href="#i-arrow"/></svg></a>
@@ -1436,9 +1365,10 @@ section.pad-full{padding-top:120px!important}
         <label>Ambito di interesse
           <select name="percorso" id="percorso">
             <option value="">Seleziona</option>
-            <option value="sperimentazione">Progetto di sperimentazione</option>
-            <option value="consulenza">Consulenza e roadmap</option>
-            <option value="academy">Robotics Academy</option>
+            <option value="assessment">Assessment</option>
+            <option value="affiancamento">Affiancamento</option>
+            <option value="poc">POC</option>
+            <option value="academy">Formazione</option>
             <option value="robot">Preventivo per un robot</option>
             <option value="non-so">Non lo so ancora</option>
           </select>
@@ -1453,9 +1383,8 @@ section.pad-full{padding-top:120px!important}
     </div>
   </div>
 </section>
-
 </main>
-
+<footer class="site-foot"><div class="wrap"><span>Abra Robotics · Prototipo non pubblicato</span></div></footer>
 <div class="quiz" id="quiz" role="dialog" aria-modal="true" aria-labelledby="quizQ">
   <div class="quiz-card">
     <button class="quiz-close" id="quizClose" type="button" aria-label="Chiudi">×</button>
@@ -1475,7 +1404,7 @@ section.pad-full{padding-top:120px!important}
   });
 
   // Steps auto-cycle
-  var steps=[].slice.call(document.querySelectorAll('#metodo .step')),cur=0,timer;
+  var steps=[].slice.call(document.querySelectorAll('#collaborazione .none')),cur=0,timer;
   function on(i){steps.forEach(function(s,k){s.classList.toggle('on',k===i)});cur=i}
   function cycle(){clearInterval(timer);timer=setInterval(function(){on((cur+1)%steps.length)},3500)}
   steps.forEach(function(s,i){s.addEventListener('click',function(){on(i);cycle()})});
@@ -1523,7 +1452,7 @@ section.pad-full{padding-top:120px!important}
         a.c.map(function(c){return '<div class="chip"><span>'+esc(c[0])+'</span><span class="tag'+tagCls[c[2]]+'">'+{Pronto:'In uso',Pilota:'In sperimentazione',Ricerca:'In sviluppo'}[c[2]]+'</span></div>'}).join('')+
         '</div></div><div><div class="tp-label">'+esc(a.n)+'</div><p class="tp-title">'+esc(a.d)+'</p>'+
         '<p class="tp-desc">Robot tipici: '+esc(a.c.map(function(c){return c[1]}).filter(function(v,k,s){return s.indexOf(v)===k}).join(', '))+'.</p>'+
-        '<div class="tp-legend"><span><i class="tag">In uso</i>applicazioni già impiegate</span><span><i class="tag t-pilota">In sperimentazione</i>progetti attivi</span><span><i class="tag t-ricerca">In sviluppo</i>ricerca e sviluppo</span></div>'+
+        
         '<button class="btn btn-pill btn-light" type="button" data-open-quiz="'+esc(a.n)+'">Avvia la valutazione preliminare</button></div></div>';
     }).join('');
   }
@@ -1562,8 +1491,8 @@ section.pad-full{padding-top:120px!important}
     qStep.textContent='Percorso indicato';qBar.style.width='100%';
     var s=ans[3]||'',r;
     if(s.indexOf('robot')>-1)r={t:'Preventivo diretto',p:'Il modello è già individuato. Il passo successivo è un preventivo con prezzo, configurazioni disponibili e tempi di consegna.',c:'Catalogo robot',h:'#catalogo',k:'robot'};
-    else if(s.indexOf('definito')>-1)r={t:'Analisi di fattibilità consigliata',p:'Il caso d\'uso è definito. Il primo passo è verificare se e con quale robot è realizzabile, prima di qualsiasi acquisto.',c:'Richiedi l\'analisi di fattibilità',h:'#contatti',k:'sperimentazione'};
-    else r={t:'Percorso di esplorazione',p:'La tecnologia è in fase di valutazione. Il passo successivo è una sessione di scouting con una roadmap dei casi d\'uso più adatti all\'azienda.',c:'Richiedi un confronto tecnico',h:'#contatti',k:'consulenza'};
+    else if(s.indexOf('definito')>-1)r={t:'Analisi di fattibilità consigliata',p:'Il caso d\'uso è definito. Il primo passo è verificare se e con quale robot è realizzabile, prima di qualsiasi acquisto.',c:'Richiedi l\'analisi di fattibilità',h:'#contatti',k:'assessment'};
+    else r={t:'Percorso di esplorazione',p:'La tecnologia è in fase di valutazione. Il passo successivo è una sessione di scouting con una roadmap dei casi d\'uso più adatti all\'azienda.',c:'Richiedi un confronto tecnico',h:'#contatti',k:'assessment'};
     qBody.innerHTML='<div class="quiz-result"><h3 id="quizQ">'+r.t+'</h3><p>'+r.p+'</p><a class="btn btn-light" href="'+r.h+'" data-go="'+r.k+'">'+r.c+' <svg><use href="#i-arrow"/></svg></a><p style="margin-top:18px;font-size:12px">Nel sito definitivo qui si chiedono nome ed email aziendale, e le risposte arrivano al CRM.</p></div>';
   }
   qBody.addEventListener('click',function(e){

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" data-mix="">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Fleet Control | Gestione di flotte di quadrupedi</title>
-<meta content="Piattaforma no-code per la gestione di quadrupedi Unitree: visione, controllo nello spazio e gestione agentica in un'unica dashboard." name="description"/>
+<title>Abra Robotics | Alternative di layout</title>
+<meta content="Verifichiamo la fattibilità, simuliamo in digital twin e validiamo in laboratorio robot umanoidi, quadrupedi, cobot e AMR per le imprese. Catalogo Unitree con prezzi." name="description"/>
 <meta name="robots" content="noindex"/>
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -910,9 +910,234 @@ section.pad-full{padding-top:120px!important}
 #scenario,.h2-spaced{}
 @media (max-width:1000px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){.stat-grid{grid-template-columns:1fr}}
-</style>
+/* Sezione stato della tecnologia: matrice tipo di robot per stadio di adozione */
+.state{padding:96px 0 112px}
+.state .h2{max-width:820px}
+.state .lead{max-width:680px}
+.matrix{display:grid;grid-template-columns:150px 1fr 1.35fr 1fr;margin-top:56px;border-top:1px solid var(--line-2)}
+.m-head,.m-row,.m-cell{padding:22px 24px;border-bottom:1px solid var(--line)}
+.m-corner{border-bottom:1px solid var(--line-2)}
+.m-head{border-bottom:1px solid var(--line-2);display:flex;flex-direction:column;gap:6px}
+.m-head b{font-size:18px;font-weight:400;letter-spacing:-.015em;line-height:1.25}
+.m-head span{font-size:13px;line-height:1.4;color:var(--muted)}
+.m-row{padding-left:0;font-family:var(--mono);font-size:13px;font-weight:500;color:var(--soft)}
+.m-cell{font-size:15px;line-height:1.45;color:var(--soft);min-width:0}
+.m-cell small{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.mid{background:var(--surface-2);border-left:1px solid var(--line-2);border-right:1px solid var(--line-2)}
+.m-head.mid{border-top:2px solid var(--text);margin-top:-1px}
+.m-head.mid b,.m-cell.mid{color:var(--text)}
+.names{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.names span{padding:4px 9px;border:1px solid var(--line-2);border-radius:4px;font-family:var(--mono);font-size:12px;color:var(--text)}
+.state-foot{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end;margin-top:44px}
+.state-foot p{font-size:18px;line-height:1.4;letter-spacing:-.01em;max-width:620px}
+.state-side{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.state-side p{font-size:14px;line-height:1.5;letter-spacing:0;color:var(--muted)}
+@media (max-width:860px){
+ .state{padding:72px 0}
+ .matrix{display:block;border-top:0;margin-top:36px}
+ .m-corner,.m-head{display:none}
+ .m-row{padding:28px 0 12px;border-bottom:1px solid var(--line-2);font-size:14px;color:var(--text)}
+ .m-cell{padding:16px 0}
+ .m-cell:empty{display:none}
+ .m-cell::before{content:attr(data-stage);display:block;margin-bottom:6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+ .mid{background:var(--surface-2);border:1px solid var(--line-2);border-left:2px solid var(--text);padding:16px;margin:12px 0}
+ .state-foot{grid-template-columns:1fr;gap:24px}
+}
+
+.m-cell small a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+
+/* Abra oggi e griglia nei casi d'uso */
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.fact h3{font-size:18px;font-weight:400;letter-spacing:-.015em}
+.fact p{font-size:14px;line-height:1.5;color:var(--soft);flex:1}
+.fact .tbc{margin-left:0;white-space:normal}
+.state-in{min-width:0}
+.state-in .matrix{margin-top:40px;grid-template-columns:130px minmax(0,1fr) minmax(0,1.35fr) minmax(0,1fr);width:100%}
+.m-head,.m-row{min-width:0}
+.m-cell small a{overflow-wrap:anywhere}
+.state-in .state-foot{grid-template-columns:1fr auto}
+.sub-h{margin-top:88px;font-size:24px;font-weight:400;letter-spacing:-.02em;line-height:1.2}
+.case-stack .chip .tag{white-space:nowrap;flex:none}
+@media (max-width:860px){.state-in .state-foot{grid-template-columns:1fr}.sub-h{margin-top:64px}}
+
+/* Versione bianco e nero: sezioni alternate, nessun accento colore */
+:root[data-mix] .sec-light{--bg:#fff;--surface:#f6f6f6;--surface-2:#efefef;--line:#e4e4e4;--line-2:#cfcfcf;--muted:#5e5e5e;--dim:#767676;--soft:#2e2e2e;--h2-dim:#6f6f6f;--vis-bg:#e9e9e9;--vignette:rgba(240,240,240,.88);background:#fff;color:#0a0a0a}
+.grad,.h2 span.grad,h1 .grad,.hero .grad,.sec-light .grad{background:none!important;-webkit-text-fill-color:currentColor;color:var(--h2-dim)!important}
+.hero h1 .grad{color:#a8a8a8!important}
+main>section:not(.proof):not(#contatti){padding-top:120px!important;padding-bottom:120px!important}
+main>section#contatti{padding-top:120px!important}
+main>section.sec-light+section.sec-light{padding-top:0!important}
+#metodo .how{align-items:start}
+#collaborazione .none p{max-width:none}
+#metodo .sw-tag{margin-top:10px}
+.sec-light .step{opacity:.62}
+.sec-light .step.on{opacity:1}
+@media (max-width:640px){main>section:not(.proof):not(#contatti){padding-top:80px!important;padding-bottom:80px!important}main>section#contatti{padding-top:80px!important}main>section.sec-light+section.sec-light{padding-top:0!important}}
+
+/* V6: solo bianco e nero, gli accenti si aggiungono dopo tramite questi token */
+:root{--acc:#f5f5f5;--st-solid:#f5f5f5;--st-solid-text:#000;--st-mid:transparent;--st-mid-text:#f5f5f5}
+:root[data-mix] .sec-light{--acc:#0a0a0a;--st-solid:#0a0a0a;--st-solid-text:#fff;--st-mid:transparent;--st-mid-text:#0a0a0a}
+.hero h1 .grad{color:#a8a8a8!important}
+.btn-light,.btn-pill.btn-light,.sec-light .btn-light{box-shadow:none}
+.btn-group{border:0;box-shadow:none;background:none}
+.tbc,.sec-light .tbc,:root[data-theme="light"] .tbc{background:#fff0a8;color:#222;-webkit-text-fill-color:#222;border:0;border-radius:3px;font-size:12px;padding:2px 7px;white-space:normal}
+.proof{padding:32px 0;border-top:1px solid var(--line);border-bottom:0}
+.proof .wrap{align-items:center;gap:14px 40px}
+.proof-label{color:var(--soft);flex:0 0 auto}
+.proof-list{gap:12px 34px}
+.line-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:56px}
+.line{display:flex;flex-direction:column;min-width:0}
+.line .f-visual{aspect-ratio:4/3;border-radius:14px;margin-bottom:20px}
+.line h3{font-size:20px;font-weight:400;letter-spacing:-.015em;margin-bottom:8px}
+.line p{font-size:14.5px;line-height:1.5;color:var(--soft);flex:1}
+.go{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--acc);text-decoration:none}
+.go svg{width:10px;height:10px}.go:hover{text-decoration:underline;text-underline-offset:3px}
+.chips{width:84%;display:grid;gap:7px}
+.chips span{background:var(--glass);border:1px solid var(--line-2);border-radius:999px;padding:7px 12px;font-family:var(--mono);font-size:12px}
+.models-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:48px;border-top:1px solid var(--line-2)}
+.model{display:flex;flex-direction:column;gap:14px;padding:28px 28px 32px 0;border-right:1px solid var(--line);min-width:0}
+.model+.model{padding-left:28px}.model:last-child{border-right:0;padding-right:0}
+.depth{display:block;height:3px;background:var(--acc);margin-top:-29.5px;margin-bottom:26px}
+.model:nth-child(1) .depth{width:33%}.model:nth-child(2) .depth{width:66%}.model:nth-child(3) .depth{width:100%}
+.model h3{font-size:26px;font-weight:400;letter-spacing:-.025em;line-height:1.15}
+.model dl{display:grid;gap:12px;flex:1}
+.model dt{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:4px}
+.model dd{font-size:15px;line-height:1.5;color:var(--soft);margin:0}
+.model .btn{align-self:flex-start;white-space:normal;line-height:1.35}
+.tag{font-size:12px}
+.tag,.tag.t-pilota,.tag.t-ricerca{border-radius:3px}
+#casePanels .tag:not(.t-pilota):not(.t-ricerca),.tp-legend .tag:not(.t-pilota):not(.t-ricerca){background:var(--st-solid);color:var(--st-solid-text);border:0}
+.tag.t-pilota{background:var(--st-mid);color:var(--st-mid-text);border:1px solid var(--text)}
+.tag.t-ricerca{background:transparent;color:var(--muted);border:1px dashed var(--muted)}
+.tp-legend i{font-style:normal}
+.m-head.mid{border-top-color:var(--acc)}
+.team-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin-top:48px}
+.person{display:flex;flex-direction:column;gap:4px;min-width:0}
+.portrait{aspect-ratio:4/5;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;font-size:30px;font-weight:300;letter-spacing:-.02em;color:var(--muted);margin-bottom:10px}
+.person b{font-size:16px;font-weight:500}
+.person span{font-size:13.5px;line-height:1.35;color:var(--muted)}
+.person .tbc{margin-top:6px;align-self:flex-start}
+.person a{margin-top:6px;font-family:var(--mono);font-size:12px;color:var(--acc)}
+.note-row{margin-top:20px}
+.line .tbc,.model .tbc,.person .tbc,.note-row .tbc{margin-left:0;margin-top:8px;display:inline-block}
+.nav-links a,.nav-cta .btn{white-space:nowrap}
+.chips span{padding:6px 12px;line-height:1.25}
+.go{align-self:flex-start}
+@media (max-width:1180px){.nav-cta{display:none}}
+.site-foot{padding:40px 0 56px}
+@media (max-width:1000px){.line-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.team-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.models-grid{grid-template-columns:1fr;border-top:0}.model,.model+.model{padding:24px 0;border-right:0;border-top:1px solid var(--line-2)}.depth{margin-top:-25.5px;margin-bottom:18px}}
+@media (max-width:520px){.line-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* V7: feedback Nico. Bottoni solo nel font principale, sezioni piu ravvicinate */
+.btn,.btn-pill,.nav-links a,.tab,.quiz-opts button{font-family:var(--sans)!important;text-transform:none!important;letter-spacing:0!important}
+.btn,.btn-pill{font-size:14px;font-weight:500;padding:11px 18px;line-height:1.25}
+.nav-links a{font-size:14px}
+.tab{font-size:14px}
+.nav .wrap{align-items:center}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-right .nav-cta{margin:0;display:flex;align-items:center}
+.nav-right .theme-btn{margin:0;flex:none}
+.nav-cta .btn{padding:0 18px;height:38px;display:inline-flex;align-items:center}
+.nav-right .theme-btn{width:38px;height:38px}
+.logo img{width:150px;height:auto;display:block}
+@media (max-width:640px){.logo img{width:124px}}
+main>section:not(.proof):not(#contatti){padding-top:72px!important;padding-bottom:72px!important}
+main>section#contatti{padding-top:72px!important}
+main>section.sec-light+section.sec-light{padding-top:0!important}
+@media (max-width:640px){main>section:not(.proof):not(#contatti){padding-top:56px!important;padding-bottom:56px!important}main>section#contatti{padding-top:56px!important}main>section.sec-light+section.sec-light{padding-top:0!important}}
+.proof-logos{display:flex;flex-wrap:wrap;align-items:center;gap:18px 38px}
+.proof-logos img{display:block;width:auto;height:24px;max-width:150px;object-fit:contain;filter:brightness(0) invert(1);opacity:.88}
+.proof-logos img.tall{height:38px}
+.btn-line{background:transparent;color:var(--text);border:1px solid var(--text)}
+.btn-line:hover{background:var(--text);color:var(--bg)}
+.btn-line svg{width:10px;height:10px}
+.line .btn{align-self:flex-start;margin-top:16px;white-space:normal;text-align:left;border-radius:999px}
+.line-grid{margin-top:40px}
+.state-foot{margin-top:28px}
+/* Modelli: schede */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:36px;align-items:stretch}
+.tier{display:flex;flex-direction:column;gap:18px;padding:26px;border:1px solid var(--line-2);border-radius:14px;background:var(--surface);min-width:0}
+.tier small{font-size:13px;color:var(--muted)}
+.tier h3{font-size:28px;font-weight:400;letter-spacing:-.025em;line-height:1.1;margin-top:4px}
+.tier>p{font-size:15px;line-height:1.5;color:var(--soft)}
+.tier ul{list-style:none;display:grid;gap:10px;flex:1;padding-top:16px;border-top:1px solid var(--line-2)}
+.tier li{position:relative;padding-left:24px;font-size:14.5px;line-height:1.4}
+.tier li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:6px;border-left:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(-45deg) scale(.8)}
+.tier .btn{align-self:stretch;justify-content:center;text-align:center;border-radius:999px;white-space:normal}
+.tier.dark{background:#0a0a0a;color:#f5f5f5;border-color:#0a0a0a}
+.tier.dark small{color:#a8a8a8}.tier.dark>p{color:#cfcfcf}.tier.dark ul{border-color:#333}
+.tier.dark .btn{background:#fff;color:#000}
+/* Modelli: percorso */
+.path{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:48px;margin-top:36px}
+.path-steps{list-style:none;display:grid;gap:0}
+.path-step{position:relative;padding:0 0 34px 44px}
+.path-step::before{content:"";position:absolute;left:13px;top:6px;bottom:-6px;width:1px;background:var(--line-2)}
+.path-step:last-child::before{display:none}
+.path-dot{position:absolute;left:0;top:0;width:27px;height:27px;border-radius:50%;background:var(--text);color:var(--bg);display:grid;place-items:center;font-size:13px;font-weight:500}
+.path-step h3{font-size:24px;font-weight:400;letter-spacing:-.02em;margin-bottom:8px}
+.path-step p{font-size:15px;line-height:1.5;color:var(--soft);margin-bottom:8px;max-width:600px}
+.path-step b{font-weight:500;color:var(--text)}
+.path-step .btn{margin-top:6px;border-radius:999px}
+/* Modelli: tabella */
+.cmp-wrap{overflow-x:auto;margin-top:36px;border:1px solid var(--line-2);border-radius:14px}
+.cmp{width:100%;min-width:720px;border-collapse:collapse;font-size:14.5px;line-height:1.45}
+.cmp th,.cmp td{text-align:left;vertical-align:top;padding:16px 18px;border-bottom:1px solid var(--line)}
+.cmp tr:last-child td,.cmp tr:last-child th{border-bottom:0}
+.cmp thead th{font-size:22px;font-weight:400;letter-spacing:-.02em}
+.cmp tbody th{font-weight:400;color:var(--muted);width:150px}
+.cmp .btn{border-radius:999px;white-space:normal}
+/* Casi d'uso: bento */
+.bento{display:grid;grid-template-columns:1.25fr 1fr;grid-auto-rows:auto;gap:14px;margin-top:32px}
+.btile{border:1px solid var(--line-2);border-radius:14px;overflow:hidden;background:var(--surface);display:flex;flex-direction:column;min-width:0}
+.btile.big{grid-row:span 2}
+.bphoto{position:relative;background:#0a0a0a center/cover;min-height:150px;flex:none;filter:grayscale(1)}
+.btile.big .bphoto{min-height:300px;flex:1}
+.bphoto b{position:absolute;left:16px;bottom:12px;color:#fff;font-size:24px;font-weight:400;letter-spacing:-.02em;text-shadow:0 1px 14px rgba(0,0,0,.7)}
+.bphoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72))}
+.bphoto b{z-index:1}
+.bstage{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;padding:13px 16px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.4}
+.bstage>span{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:2px}
+.bstage .names{margin-top:8px}
+.bstage small{display:block;margin-top:8px;font-size:12.5px;color:var(--muted)}
+.bstage small a{color:inherit}
+/* Casi d'uso: board */
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px}
+.bcol{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.bcol h3{font-size:19px;font-weight:400;letter-spacing:-.015em}
+.bcol>p{font-size:13.5px;color:var(--muted);margin-bottom:6px}
+.bcard{background:var(--bg);border:1px solid var(--line-2);border-radius:9px;padding:11px 12px;font-size:14px;line-height:1.35}
+.bcard span{display:block;margin-top:5px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+/* Casi d'uso: scala */
+.ladder{margin-top:32px;border-top:1px solid var(--line-2)}
+.lrow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--line-2)}
+.lrow h3{font-size:22px;font-weight:400;letter-spacing:-.02em}
+.lbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;margin-bottom:12px}
+.lbar i{height:8px;background:var(--line-2);border-radius:2px}.lbar i.on{background:var(--text)}
+.lcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;font-size:14.5px;line-height:1.4}
+.lcols b{display:block;font-family:var(--mono);font-weight:400;font-size:12px;color:var(--muted);margin-bottom:4px}
+/* Catalogo: schede semplici */
+.cat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:32px}
+.cat-card{display:flex;flex-direction:column;border:1px solid var(--line-2);border-radius:14px;overflow:hidden;color:inherit;text-decoration:none;background:var(--surface);transition:border-color .2s;min-width:0}
+.cat-card:hover,.cat-card:focus-visible{border-color:var(--text)}
+.cat-img{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;overflow:hidden}
+.cat-img img{width:100%;height:100%;object-fit:contain;padding:12px;filter:grayscale(1)}
+.cat-img img.cover{object-fit:cover;padding:0}
+.cat-card span{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:14px;font-size:15px;line-height:1.25}
+.cat-card svg{width:10px;height:10px;flex:none}
+/* Pagina alternative */
+.alt-head{padding:56px 0 8px}
+.alt-tag{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding-top:40px;margin-top:56px;border-top:2px solid #0a0a0a;font-size:18px}
+.alt-tag:first-of-type{margin-top:24px}
+.alt-tag a{font-size:14px;color:#5e5e5e}
+.alt-tag em{font-style:normal;background:#0a0a0a;color:#fff;font-size:13px;padding:3px 8px;border-radius:3px}
+@media (max-width:1000px){.cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.path{grid-template-columns:1fr;gap:20px}}
+@media (max-width:820px){.tiers,.board{grid-template-columns:1fr}.bento{grid-template-columns:1fr}.btile.big .bphoto{min-height:220px}.lrow{grid-template-columns:1fr;gap:12px}}
+@media (max-width:520px){.cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cat-card:last-child{grid-column:span 2}.cat-card:last-child .cat-img{aspect-ratio:2/1}.bstage{grid-template-columns:1fr;gap:4px}.lcols{grid-template-columns:1fr}}
+main>section{padding-bottom:72px}</style>
 </head>
 <body>
+
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-arrow" viewBox="0 0 10 10"><path d="M3.5 1.5 7 5l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
@@ -935,157 +1160,21 @@ section.pad-full{padding-top:120px!important}
   <symbol id="i-dl" viewBox="0 0 16 16"><path d="M8 2v8M4.5 7 8 10.5 11.5 7M2.5 13.5h11" fill="none" stroke="currentColor"/></symbol>
 </svg>
 
-<header class="hero hero-sub force-dark">
-  <div class="hero-media" aria-hidden="true"><div class="hv hv-a" style="background-image:url(images/official/unitree-a2-buio.webp)"></div></div>
-  <nav class="nav" aria-label="Principale">
-    <div class="wrap">
-      <a class="logo" href="index.html"><img src="images/logo.webp" alt="Abra Robotics" width="96" height="30"/></a>
-      <div class="nav-links">
-        <a href="index.html#servizi">Servizi</a>
-        <a href="index.html#metodo">Metodo</a>
-        <a href="v5-tecnologia.html">Tecnologia</a>
-        <a href="index.html#applicazioni">Applicazioni</a>
-        <a href="index.html#catalogo">Robot e prezzi</a>
-      </div>
-      <div class="nav-right">
-      <button class="theme-btn" id="theme" type="button" aria-label="Cambia tema chiaro o scuro">
-        <svg class="moon" viewBox="0 0 16 16"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="none" stroke="currentColor" stroke-linejoin="round"/></svg>
-        <svg class="sun" viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M13 3l-1.4 1.4M4.4 11.6 3 13" stroke="currentColor"/></svg>
-      </button>
-      <div class="nav-cta btn-group">
-        <a class="btn btn-light" href="#contatti">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a>
-      </div>
-      </div>
-    </div>
-  </nav>
-  <div class="hero-inner"><div class="wrap"><div>
-    <p class="hero-kicker">Fleet Control · Flotte di quadrupedi</p>
-    <h1>Visione, controllo e gestione agentica dei quadrupedi Unitree <span class="grad">in un'unica dashboard.</span></h1>
-    <p>Per aziende che usano quadrupedi per ispezione, sicurezza e monitoraggio di siti: una piattaforma no-code già integrata.</p>
-    <div class="btn-group">
-      <a class="btn btn-light" href="#contatti">Richiedi un confronto tecnico <svg><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost" href="#come">Come funziona <svg><use href="#i-arrow"/></svg></a>
-    </div>
-  </div></div></div>
-</header>
-<p class="draft-flag" role="note">Bozza V5: in giallo i punti da confermare</p>
 <main>
-<section id="come" class="pad-full"><div class="wrap">
-    <h2 class="h2 reveal" style="max-width:720px">Dalla connessione dei robot <span class="grad">alla gestione delle attività.</span></h2>
-    
-    <div class="how"><div class="f-visual reveal" style="--img:url(images/official/unitree-a2-buio.webp);aspect-ratio:500/370"><div class="mock"><div class="mock-head"><span>Fleet Control</span><span>Illustrativo</span></div><svg class="draw" viewBox="0 0 280 92" fill="none" stroke="currentColor" aria-hidden="true"><rect x="1" y="1" width="278" height="90" rx="6"/><path d="M92 1v38h46M190 91V52h89M1 58h52"/><path d="M26 76c24-38 66-8 92-24s38-22 76-2 44 8 62-12" stroke-dasharray="3 4"/><circle cx="70" cy="58" r="5" fill="currentColor"/><circle cx="168" cy="38" r="5" fill="currentColor"/><circle cx="236" cy="48" r="5"/></svg><div class="mock-row"><span>Go2 · Area nord</span><b>In ispezione</b></div><div class="mock-row"><span>B2 · Perimetro</span><b>In movimento</b></div></div></div><ol class="steps steps-static reveal"><li class="step on"><h3><svg><use href="#i-truck"/></svg>1 · Connessione dei quadrupedi</h3><p>La piattaforma è già integrata con i quadrupedi Unitree: non c'è integrazione da costruire.</p></li><li class="step on"><h3><svg><use href="#i-img"/></svg>2 · Visione e controllo nello spazio</h3><p>Immagini provenienti dal robot e controllo della flotta nello spazio.</p></li><li class="step on"><h3><svg><use href="#i-spark"/></svg>3 · Assegnazione delle attività</h3><p>Gestione agentica di uno o più robot da un'unica dashboard, senza scrivere codice.</p></li></ol></div>
-  </div></section>
-<section id="risultato" class="sec-light pad-full"><div class="wrap">
-    <h2 class="h2 reveal" style="max-width:720px">Pensato per chi presidia <span class="grad">siti e impianti.</span></h2>
-    <p class="lead reveal"><span class="tbc" title="Indicare solo applicazioni già provate o dichiarare che sono esempi">Casi reali da confermare</span></p>
-    <div class="info-grid reveal"><div class="info-card"><h3>Ispezione</h3><p>Giri programmati su impianti e aree tecniche, con raccolta di immagini.</p></div><div class="info-card"><h3>Sicurezza</h3><p>Pattugliamento di perimetri e aree sensibili.</p></div><div class="info-card"><h3>Monitoraggio di siti</h3><p>Controllo periodico di siti estesi o difficili da presidiare.</p></div></div>
-  </div></section>
-<section id="compatibilita" class="pad-full"><div class="wrap">
-    <h2 class="h2 reveal" style="max-width:720px">Quadrupedi <span class="grad">supportati.</span></h2>
-    <p class="lead reveal"><span class="tbc" title="Il pitch dice tutti i quadrupedi Unitree">Verificare modello per modello</span></p>
-    <div class="robot-pills reveal"><a href="https://abrarobotics.com/go2.html" target="_blank" rel="noopener">Unitree Go2</a><a href="https://abrarobotics.com/as2.html" target="_blank" rel="noopener">Unitree AS2</a><a href="https://abrarobotics.com/a2.html" target="_blank" rel="noopener">Unitree A2</a><a href="https://abrarobotics.com/b2.html" target="_blank" rel="noopener">Unitree B2</a></div>
-  </div></section>
-<section id="stato" class="sec-light pad-full"><div class="wrap">
-    <h2 class="h2 reveal" style="max-width:720px">Cosa è disponibile <span class="grad">e cosa stiamo sviluppando.</span></h2>
-    
-    <div class="info-grid two reveal"><div class="info-card"><h3>Disponibile oggi <span class="tbc" title="Fonte: pitch di Joe, non ancora verificato">Da verificare con Joe</span></h3><ul><li>Piattaforma no-code</li><li>Visione e controllo della flotta nello spazio</li><li>Gestione agentica di uno o più robot</li></ul></div><div class="info-card"><h3>In sviluppo</h3><ul><li>Roadmap da indicare con Joe</li></ul></div></div>
-  </div></section>
-<section id="domande" class="pad-full"><div class="wrap">
-    <h2 class="h2 reveal" style="max-width:720px">Domande <span>frequenti</span></h2>
-    
-    <div class="faq-list reveal"><details class="faq-item"><summary>Serve un team di sviluppatori?</summary><p>No, la piattaforma è no-code. Abra affianca il team del cliente nella messa in funzione.</p></details><details class="faq-item"><summary>Si può iniziare con un solo robot?</summary><p>Sì. Fleet Control gestisce uno o più robot.</p></details><details class="faq-item"><summary>È possibile acquistare anche i robot da Abra?</summary><p>Sì. I quadrupedi Unitree sono nel catalogo, con prezzi e configurazioni.</p></details></div>
-  </div></section>
-<section id="altri" class="sec-light pad-full"><div class="wrap">
-    <h2 class="h2 reveal" style="max-width:720px">Prima della flotta, <span class="grad">gli altri strumenti.</span></h2>
-    
-    <div class="info-grid two reveal"><div class="info-card"><h3>Cell Simulator</h3><p>Fattibilità e investimento, prima del progetto.</p><a class="more" href="v5-cell-simulator.html">Scopri Cell Simulator</a></div><div class="info-card"><h3>Humanoid Studio</h3><p>POC su umanoidi con una pipeline pronta.</p><a class="more" href="v5-humanoid-studio.html">Scopri Humanoid Studio</a></div></div>
-  </div></section>
-
-<!-- 11. Contatti -->
-<section id="contatti" class="pad-full" style="padding-bottom:0">
-  <div class="wrap">
-    <div class="cta cta-form reveal force-dark">
-      <svg class="constellation" viewBox="0 0 1100 420" preserveAspectRatio="none" aria-hidden="true">
-        <line x1="70" y1="70" x2="250" y2="120"/><line x1="250" y1="120" x2="210" y2="330"/><line x1="210" y1="330" x2="90" y2="360"/>
-        <line x1="860" y1="60" x2="1020" y2="110"/><line x1="1020" y1="110" x2="960" y2="300"/><line x1="960" y1="300" x2="820" y2="350"/><line x1="860" y1="60" x2="820" y2="350"/>
-        <circle cx="70" cy="70" r="2"/><circle cx="250" cy="120" r="2.5"/><circle cx="210" cy="330" r="2"/><circle cx="90" cy="360" r="1.6"/>
-        <circle cx="860" cy="60" r="2.4"/><circle cx="1020" cy="110" r="1.8"/><circle cx="960" cy="300" r="2.6"/><circle cx="820" cy="350" r="1.8"/>
-      </svg>
-      <div class="cta-copy">
-        <h2 class="h2">Un confronto tecnico <span class="grad">sulla flotta.</span></h2>
-        <p>Un tecnico Abra ricontatta l'azienda per un primo confronto su siti da presidiare e robot impiegati.</p>
-        <div class="btn-group">
-          <a class="btn btn-light" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ22FrpPdyPVRihi4eXPQlljTcG2toa8XF2d8W-QX-L9cKMaXqozq_YsHym56LEdTs9WsnqlTHeF" target="_blank" rel="noopener noreferrer">Prenota un confronto <svg><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-ghost" href="https://abrarobotics.com/listino-unitree.html" target="_blank" rel="noopener">Richiedi un preventivo <svg><use href="#i-arrow"/></svg></a>
-        </div>
-        <p class="cta-alt">Per chi ha già individuato il modello è disponibile un preventivo diretto.</p>
-      </div>
-      <form class="contact-form" id="contact-form">
-        <div class="form-row">
-          <label>Nome e cognome<input name="nome" placeholder="Mario Rossi" required type="text" autocomplete="name"/></label>
-          <label>Ruolo<input name="ruolo" placeholder="Head of Innovation" type="text" autocomplete="organization-title"/></label>
-        </div>
-        <div class="form-row">
-          <label>Email aziendale<input name="email" placeholder="nome@azienda.it" required type="email" autocomplete="email"/></label>
-          <label>Azienda<input name="azienda" placeholder="Acme S.p.A." required type="text" autocomplete="organization"/></label>
-        </div>
-        <label>Ambito di interesse
-          <select name="percorso" id="percorso">
-            <option value="">Seleziona</option>
-            <option value="sperimentazione">Progetto di sperimentazione</option>
-            <option value="consulenza">Consulenza e roadmap</option>
-            <option value="academy">Robotics Academy</option>
-            <option value="robot">Preventivo per un robot</option>
-            <option value="non-so">Non lo so ancora</option>
-          </select>
-        </label>
-        <label>Descrizione del progetto<textarea name="messaggio" id="messaggio" placeholder="Per esempio: ispezione notturna dei quadri elettrici in due capannoni." required rows="4"></textarea></label>
-        <div class="form-footer">
-          <button class="btn btn-light form-submit" type="submit">Invia la richiesta <svg><use href="#i-arrow"/></svg></button>
-          <p class="form-note">Risponde un tecnico Abra. <span class="tbc" title="Aggiungere checkbox privacy collegata alla policy">Consenso privacy da aggiungere</span></p>
-        </div>
-        <div aria-live="polite" class="form-feedback" id="form-feedback"></div>
-      </form>
+<section class="sec-light"><div class="wrap alt-head"><h1 class="h2">Alternative per le due sezioni da arricchire</h1><p class="lead"><a href="index.html">Torna alla home v7</a></p></div></section>
+<section class="sec-light"><div class="wrap"><h2 class="h2">Come lavorare assieme</h2>
+<p class="alt-tag">Alternativa A: tre schede, la più strutturata in nero <em>Consigliata, già in home</em> <a href="https://21st.dev/community/components/s/pricing-section" target="_blank" rel="noopener">Riferimento su 21st.dev</a></p><p class="lead">I nostri modelli di collaborazione, dal più semplice al più strutturato.</p><div class="tiers"><article class="tier"><div><small>Il più semplice</small><h3>Assessment</h3></div><p>Aziende che vogliono capire dove e come introdurre la robotica nei propri processi.</p><ul><li>Mappatura dei processi</li><li>Fattibilità di ciascun caso d’uso</li><li>Roadmap con tempi e costi indicativi</li></ul><a class="btn btn-line" href="#">Richiedi un assessment</a></article><article class="tier"><div><small>Intermedio</small><h3>Affiancamento</h3></div><p>Team R&amp;D, Innovation e Automazione che vogliono sviluppare il progetto internamente e costruire competenze in azienda.</p><ul><li>Sviluppo del caso d’uso guidato da Abra</li><li>Formazione del team</li><li>Accesso ai nostri strumenti proprietari</li></ul><a class="btn btn-line" href="#">Prenota una call con un consulente Abra</a></article><article class="tier dark"><div><small>Il più strutturato</small><h3>POC</h3></div><p>Aziende che hanno già individuato il caso d’uso e vogliono affidarne sviluppo e validazione.</p><ul><li>Sviluppo e validazione della soluzione</li><li>Simulazione in digital twin</li><li>Deployment in produzione con certificazione <span class="tbc" title="Il brief indica deployment e certificazione come non ancora dimostrati">Certificazione da validare</span></li></ul><a class="btn btn-light" href="#">Prenota una call con un consulente Abra</a></article></div>
+<p class="alt-tag">Alternativa B: percorso verticale  <a href="https://21st.dev/community/components/s/timeline" target="_blank" rel="noopener">Riferimento su 21st.dev</a></p><div class="path"><div><h2 class="h2">Come lavorare assieme</h2><p class="lead">I nostri modelli di collaborazione, dal più semplice al più strutturato.</p></div><ol class="path-steps"><li class="path-step"><span class="path-dot">1</span><h3>Assessment</h3><p><b>Per chi è:</b> Aziende che vogliono capire dove e come introdurre la robotica nei propri processi.</p><p>Mappiamo i processi, valutiamo la fattibilità di ciascun caso d’uso e definiamo una roadmap con tempi e costi indicativi.</p><a class="btn btn-line" href="#">Richiedi un assessment <svg><use href="#i-arrow"/></svg></a></li><li class="path-step"><span class="path-dot">2</span><h3>Affiancamento</h3><p><b>Per chi è:</b> Team R&amp;D, Innovation e Automazione che vogliono sviluppare il progetto internamente e costruire competenze in azienda.</p><p>Guidiamo il team del cliente nello sviluppo del caso d’uso, con formazione e accesso ai nostri strumenti proprietari.</p><a class="btn btn-line" href="#">Prenota una call con un consulente Abra <svg><use href="#i-arrow"/></svg></a></li><li class="path-step"><span class="path-dot">3</span><h3>POC</h3><p><b>Per chi è:</b> Aziende che hanno già individuato il caso d’uso e vogliono affidarne sviluppo e validazione.</p><p>Sviluppiamo e validiamo la soluzione, dalla simulazione in digital twin al deployment in produzione con certificazione. <span class="tbc" title="Il brief indica deployment e certificazione come non ancora dimostrati">Certificazione da validare</span></p><a class="btn btn-line" href="#">Prenota una call con un consulente Abra <svg><use href="#i-arrow"/></svg></a></li></ol></div>
+<p class="alt-tag">Alternativa C: tabella di confronto  <a href="https://21st.dev/community/components/s/comparison" target="_blank" rel="noopener">Riferimento su 21st.dev</a></p><p class="lead">I nostri modelli di collaborazione, dal più semplice al più strutturato.</p><div class="cmp-wrap"><table class="cmp"><thead><tr><th></th><th>Assessment</th><th>Affiancamento</th><th>POC</th></tr></thead><tbody><tr><th>Per chi è</th><td>Aziende che vogliono capire dove e come introdurre la robotica nei propri processi.</td><td>Team R&amp;D, Innovation e Automazione che vogliono sviluppare il progetto internamente e costruire competenze in azienda.</td><td>Aziende che hanno già individuato il caso d’uso e vogliono affidarne sviluppo e validazione.</td></tr><tr><th>Cosa comprende</th><td>Mappatura dei processi<br>Fattibilità di ciascun caso d’uso<br>Roadmap con tempi e costi indicativi</td><td>Sviluppo del caso d’uso guidato da Abra<br>Formazione del team<br>Accesso ai nostri strumenti proprietari</td><td>Sviluppo e validazione della soluzione<br>Simulazione in digital twin<br>Deployment in produzione con certificazione <span class="tbc" title="Il brief indica deployment e certificazione come non ancora dimostrati">Certificazione da validare</span></td></tr><tr><th>Chi sviluppa</th><td>Nessuno, è una fase di valutazione</td><td>Il team del cliente, guidato da Abra</td><td>Abra</td></tr><tr><th></th><td><a class="btn btn-line" href="#">Richiedi un assessment</a></td><td><a class="btn btn-line" href="#">Prenota una call con un consulente Abra</a></td><td><a class="btn btn-line" href="#">Prenota una call con un consulente Abra</a></td></tr></tbody></table></div>
+</div></section>
+<section class="sec-light"><div class="wrap"><h2 class="h2">I principali casi d'uso della robotica di ultima generazione</h2>
+<p class="alt-tag">Alternativa A: griglia con foto per tipo di robot <em>Consigliata, già in home</em> <a href="https://21st.dev/community/components/s/bento-grid" target="_blank" rel="noopener">Riferimento su 21st.dev</a></p><div class="bento">
+      <article class="btile big"><div class="bphoto" style="background-image:url(images/official/unitree-g1-dettaglio.webp)"><b>Umanoidi</b></div><div class="bstage"><span>In uso operativo</span><div>Accoglienza, showroom e laboratori R&amp;D</div></div><div class="bstage"><span>In sperimentazione nell'industria</span><div>Movimentazione di componenti e attività in produzione<div class="names"><span>BMW</span><span>Mercedes-Benz</span></div><small>BMW a Spartanburg e Lipsia, Mercedes-Benz a Berlino. Fonti: <a href="https://www.automotiveworld.com/news/bmw-to-deploy-humanoid-robots-at-leipzig-plant/" target="_blank" rel="noopener">BMW Group, via Automotive World</a> e <a href="https://group.mercedes-benz.com/company/production/production-network/mbdfc-humanoid-robots.html" target="_blank" rel="noopener">Mercedes-Benz</a>.</small></div></div><div class="bstage"><span>In sviluppo</span><div>Compiti di linea complessi e non strutturati</div></div></article>
+      <article class="btile"><div class="bphoto" style="background-image:url(images/official/unitree-a2-buio.webp)"><b>Quadrupedi</b></div><div class="bstage"><span>In uso operativo</span><div>Ispezione e ronde</div></div><div class="bstage"><span>In sperimentazione nell'industria</span><div>Lettura di strumenti e quadri</div></div></article>
+      <article class="btile"><div class="bphoto" style="background-image:url(images/manifattura/amr/mir250-action.jpg)"><b>Cobot e AMR</b></div><div class="bstage"><span>In uso operativo</span><div>Asservimento e logistica interna</div></div></article>
     </div>
-  </div>
-</section>
-
+<p class="alt-tag">Alternativa B: bacheca per stadio con tutti i casi  <a href="https://21st.dev/community/components/s/tabs" target="_blank" rel="noopener">Riferimento su 21st.dev</a></p><div class="board"><div class="bcol"><h3>In uso operativo</h3><p>Applicazioni già impiegate dalle aziende</p><div class="bcard">Ispezione di impianti e linee produttive<span>Quadrupede</span></div><div class="bcard">Ispezione termografica<span>Quadrupede</span></div><div class="bcard">Ronde e monitoraggio perimetrale<span>Quadrupede</span></div><div class="bcard">Trasporto di materiali tra reparti<span>AMR</span></div><div class="bcard">Asservimento macchine<span>Cobot</span></div><div class="bcard">Pick and place e pallettizzazione<span>Cobot</span></div><div class="bcard">Accoglienza, showroom e visite guidate<span>Umanoide</span></div><div class="bcard">Fiere ed eventi<span>Umanoide, quadrupede</span></div><div class="bcard">Laboratori R&D e sviluppo di applicazioni<span>Umanoide, quadrupede</span></div><div class="bcard">Università e didattica<span>Umanoide, quadrupede</span></div></div><div class="bcol"><h3>In sperimentazione nell'industria</h3><p>Progetti attivi presso grandi gruppi</p><div class="bcard">Lettura di strumenti, quadri e manometri<span>Quadrupede</span></div><div class="bcard">Ispezione di aree pericolose o confinate<span>Quadrupede</span></div><div class="bcard">Monitoraggio di cantieri<span>Quadrupede</span></div><div class="bcard">Ispezione di sottostazioni, impianti fotovoltaici, gallerie<span>Quadrupede</span></div><div class="bcard">Picking e asservimento di magazzino<span>Cobot, AMR</span></div><div class="bcard">Controllo qualità visivo<span>Cobot</span></div><div class="bcard">Assemblaggio leggero<span>Cobot</span></div><div class="bcard">Assistenza nei punti vendita<span>Umanoide</span></div></div><div class="bcol"><h3>In sviluppo</h3><p>Applicazioni in fase di ricerca e sviluppo</p><div class="bcard">Compiti di linea con umanoidi<span>Umanoide</span></div></div></div>
+<p class="alt-tag">Alternativa C: scala di maturità per tipo di robot  <a href="https://21st.dev/community/components/s/comparison" target="_blank" rel="noopener">Riferimento su 21st.dev</a></p><div class="ladder"><div class="lrow"><h3>Umanoidi</h3><div><div class="lbar"><i class=on></i><i class=on></i><i class=on></i></div><div class="lcols"><div><b>In uso operativo</b>Accoglienza, showroom e laboratori R&amp;D</div><div><b>In sperimentazione nell'industria</b>Movimentazione di componenti e attività in produzione (BMW, Mercedes-Benz)</div><div><b>In sviluppo</b>Compiti di linea complessi e non strutturati</div></div></div></div><div class="lrow"><h3>Quadrupedi</h3><div><div class="lbar"><i class=on></i><i class=on></i><i></i></div><div class="lcols"><div><b>In uso operativo</b>Ispezione e ronde</div><div><b>In sperimentazione nell'industria</b>Lettura di strumenti e quadri</div><div><b>In sviluppo</b></div></div></div></div><div class="lrow"><h3>Cobot e AMR</h3><div><div class="lbar"><i class=on></i><i></i><i></i></div><div class="lcols"><div><b>In uso operativo</b>Asservimento e logistica interna</div><div><b>In sperimentazione nell'industria</b></div><div><b>In sviluppo</b></div></div></div></div></div>
+</div></section>
 </main>
-<footer class="site-foot"><div class="wrap"><span>Abra Robotics · Prototipo non pubblicato</span><a href="index.html">Torna alla home</a></div></footer>
-<script>
-(function(){
-  // Theme
-  document.getElementById('theme').addEventListener('click',function(){
-    var r=document.documentElement,light=r.getAttribute('data-theme')!=='light';
-    if(light)r.setAttribute('data-theme','light');else r.removeAttribute('data-theme');
-    try{localStorage.setItem('abra-theme',light?'light':'dark')}catch(e){}
-  });
-
-  // Steps auto-cycle
-  var steps=[].slice.call(document.querySelectorAll('#metodo .step')),cur=0,timer;
-  function on(i){steps.forEach(function(s,k){s.classList.toggle('on',k===i)});cur=i}
-  function cycle(){clearInterval(timer);timer=setInterval(function(){on((cur+1)%steps.length)},3500)}
-  steps.forEach(function(s,i){s.addEventListener('click',function(){on(i);cycle()})});
-  cycle();
-
-  // Form: in anteprima non invia (script.js lo collega sulla homepage live)
-  var form=document.getElementById('contact-form');
-  if(form&&!window.__abraFormLive)form.addEventListener('submit',function(e){
-    e.preventDefault();document.getElementById('form-feedback').textContent='Anteprima: l\'invio del form si attiva con la messa online.';
-  });
-
-  // Hero option B: load and play the factory video only when chosen
-  var hvB=document.querySelector('.hv-b');
-  if(hvB&&document.documentElement.getAttribute('data-hero')==='b'&&!matchMedia('(prefers-reduced-motion: reduce)').matches){hvB.src=hvB.getAttribute('data-src');hvB.play().catch(function(){})}
-
-  // Start links preselect the path in the form
-  var sel=document.getElementById('percorso');
-  document.querySelectorAll('[data-start]').forEach(function(a){a.addEventListener('click',function(){if(sel)sel.value=a.getAttribute('data-start')})});
-
-  // Reveal on scroll
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(r){io.observe(r)});
-})();
-</script>
-</body>
-</html>
+</body></html>
