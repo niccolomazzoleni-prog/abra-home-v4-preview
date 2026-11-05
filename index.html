@@ -1134,6 +1134,36 @@ main>section.sec-light+section.sec-light{padding-top:0!important}
 @media (max-width:1000px){.cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.path{grid-template-columns:1fr;gap:20px}}
 @media (max-width:820px){.tiers,.board{grid-template-columns:1fr}.bento{grid-template-columns:1fr}.btile.big .bphoto{min-height:220px}.lrow{grid-template-columns:1fr;gap:12px}}
 @media (max-width:520px){.cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cat-card:last-child{grid-column:span 2}.cat-card:last-child .cat-img{aspect-ratio:2/1}.bstage{grid-template-columns:1fr;gap:4px}.lcols{grid-template-columns:1fr}}
+
+/* V8: bottoni uniformi, MiR ridotto */
+.proof-logos img.tall{height:29px}
+.line .btn,.tier .btn{align-self:stretch;justify-content:center;text-align:center;white-space:nowrap;height:44px;padding:0 16px;margin-top:16px;border-radius:999px}
+.tier .btn{margin-top:0}
+.line .btn svg{display:none}
+
+/* V9: card con foto a tutta altezza (stile 4) */
+.pc-lines,.pc-tiers{display:grid;gap:14px;margin-top:36px}
+.pc-lines{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pc-tiers{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pc{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px;border-radius:18px;overflow:hidden;background:#111;color:#fff;min-width:0}
+.pc-img{position:absolute;inset:0;background:center/cover;filter:grayscale(1);transition:transform .5s ease}
+.pc:hover .pc-img{transform:scale(1.04)}
+.pc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1) 0,rgba(0,0,0,.82) 42%,rgba(0,0,0,.95) 100%)}
+.pc-body{position:relative;z-index:1;display:flex;flex-direction:column;gap:9px;padding:18px}
+.pc h3{font-size:21px;font-weight:400;letter-spacing:-.015em;line-height:1.15;color:#fff}
+.pc-t h3{font-size:28px;letter-spacing:-.025em}
+.pc p{font-size:14.5px;line-height:1.45;color:#ededed}
+.pc small{font-size:13px;color:#cfcfcf}
+.pc ul{list-style:none;display:grid;gap:7px;font-size:14px;line-height:1.35;padding-top:12px;border-top:1px solid rgba(255,255,255,.28);color:#fff}
+.pc li{position:relative;padding-left:16px}
+.pc li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:#fff}
+.pc .tbc{margin:4px 0 0;display:inline-block}
+.pc-btn,.sec-light .pc-btn{display:flex;align-items:center;justify-content:center;height:44px;padding:0 16px;margin-top:6px;border-radius:999px;background:#fff;color:#000;border:0;white-space:nowrap;text-align:center}
+.pc-btn:hover{background:#dcdcdc}
+@media (prefers-reduced-motion:reduce){.pc-img{transition:none}.pc:hover .pc-img{transform:none}}
+@media (max-width:1000px){.pc-lines{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){.pc-tiers{grid-template-columns:1fr}}
+@media (max-width:520px){.pc-lines{grid-template-columns:1fr}.pc{min-height:360px}}
 </style>
 </head>
 <body>
@@ -1204,7 +1234,7 @@ main>section.sec-light+section.sec-light{padding-top:0!important}
   </div>
 </header>
 
-<p class="draft-flag" role="note">Bozza V7: in giallo i punti da confermare</p>
+<p class="draft-flag" role="note">Bozza V9: in giallo i punti da confermare</p>
 <main>
 <section class="proof" aria-label="I nostri Clienti e Partner">
   <div class="wrap">
@@ -1224,39 +1254,14 @@ main>section.sec-light+section.sec-light{padding-top:0!important}
 <section id="servizi" class="sec-light pad-full">
   <div class="wrap">
     <h2 class="h2 reveal" style="max-width:760px">Dalla fornitura al software, quattro linee di servizio per portare la robotica nelle aziende.</h2>
-    <div class="line-grid">
-      <article class="line reveal">
-        <div class="f-visual" style="--img:url(images/official/unitree-g1-ufficio.webp)"></div>
-        <h3>Fornitura</h3>
-        <p>Un ampio catalogo di robot da scegliere e configurare, consegnati in massimo 6 settimane.</p>
-        <a class="btn btn-line" href="#catalogo">Visualizza il catalogo <svg><use href="#i-arrow"/></svg></a>
-      </article>
-      <article class="line reveal">
-        <div class="f-visual" style="--img:url(images/official/unitree-a2-escursione.webp)"><div class="chips"><span>ROS 2</span><span>Digital twin</span><span>Embodied AI</span><span>Sicurezza</span></div></div>
-        <h3>Formazione</h3>
-        <p>Programmi di formazione aziendale per team interni: ROS 2, simulazione in digital twin, embodied AI e sicurezza dei sistemi robotici.</p>
-        <a class="btn btn-line" href="#contatti" data-start="academy">Scopri i programmi di formazione <svg><use href="#i-arrow"/></svg></a>
-      </article>
-      <article class="line reveal">
-        <div class="f-visual" style="--img:url(images/official/unitree-b2-traino.webp)"></div>
-        <h3>Laboratorio</h3>
-        <p>Test e configurazione dei robot in un laboratorio dedicato.</p>
-        <a class="btn btn-line" href="#team">Scopri il laboratorio Abra <svg><use href="#i-arrow"/></svg></a>
-      </article>
-      <article class="line reveal">
-        <div class="f-visual" style="--img:url(images/official/unitree-g1-dettaglio.webp)"><div class="chips"><span>Cell Simulator</span><span>Humanoid Studio</span><span>Fleet Control</span></div></div>
-        <h3>Software</h3>
-        <p>Strumenti proprietari per simulare, sviluppare e gestire i robot.</p>
-        <a class="btn btn-line" href="#software">Scopri la suite software <svg><use href="#i-arrow"/></svg></a>
-      </article>
-    </div>
+    <div class="pc-lines"><article class="pc reveal"><div class="pc-img" style="background-image:url(images/official/unitree-g1-ufficio.webp)"></div><div class="pc-body"><h3>Fornitura</h3><p>Un ampio catalogo di robot da scegliere e configurare, consegnati in massimo 6 settimane.</p><a class="btn pc-btn" href="#catalogo">Visualizza il catalogo</a></div></article><article class="pc reveal"><div class="pc-img" style="background-image:url(images/official/unitree-a2-escursione.webp)"></div><div class="pc-body"><h3>Formazione</h3><p>Programmi di formazione aziendale per team interni: ROS 2, simulazione in digital twin, embodied AI e sicurezza dei sistemi robotici.</p><a class="btn pc-btn" href="#contatti" data-start="academy">Scopri i programmi</a></div></article><article class="pc reveal"><div class="pc-img" style="background-image:url(images/official/unitree-b2-traino.webp)"></div><div class="pc-body"><h3>Laboratorio</h3><p>Test e configurazione dei robot in un laboratorio dedicato.</p><a class="btn pc-btn" href="#team">Scopri il laboratorio Abra</a></div></article><article class="pc reveal"><div class="pc-img" style="background-image:url(images/official/unitree-g1-dettaglio.webp)"></div><div class="pc-body"><h3>Software</h3><p>Strumenti proprietari per simulare, sviluppare e gestire i robot.</p><a class="btn pc-btn" href="#software">Scopri la suite software</a></div></article></div>
   </div>
 </section>
 <section id="collaborazione" class="sec-light pad-full">
   <div class="wrap">
     <h2 class="h2 reveal">Come lavorare assieme</h2>
     <p class="lead reveal">I nostri modelli di collaborazione, dal più semplice al più strutturato.</p>
-    <div class="tiers reveal"><article class="tier"><div><small>Il più semplice</small><h3>Assessment</h3></div><p>Aziende che vogliono capire dove e come introdurre la robotica nei propri processi.</p><ul><li>Mappatura dei processi</li><li>Fattibilità di ciascun caso d’uso</li><li>Roadmap con tempi e costi indicativi</li></ul><a class="btn btn-line" href="#contatti" data-start="assessment">Richiedi un assessment</a></article><article class="tier"><div><small>Intermedio</small><h3>Affiancamento</h3></div><p>Team R&amp;D, Innovation e Automazione che vogliono sviluppare il progetto internamente e costruire competenze in azienda.</p><ul><li>Sviluppo del caso d’uso guidato da Abra</li><li>Formazione del team</li><li>Accesso ai nostri strumenti proprietari</li></ul><a class="btn btn-line" href="#contatti" data-start="affiancamento">Prenota una call con un consulente Abra</a></article><article class="tier dark"><div><small>Il più strutturato</small><h3>POC</h3></div><p>Aziende che hanno già individuato il caso d’uso e vogliono affidarne sviluppo e validazione.</p><ul><li>Sviluppo e validazione della soluzione</li><li>Simulazione in digital twin</li><li>Deployment in produzione con certificazione <span class="tbc" title="Il brief indica deployment e certificazione come non ancora dimostrati">Certificazione da validare</span></li></ul><a class="btn btn-light" href="#contatti" data-start="poc">Prenota una call con un consulente Abra</a></article></div>
+    <div class="pc-tiers reveal"><article class="pc pc-t"><div class="pc-img" style="background-image:url(images/official/unitree-g1-03.webp)"></div><div class="pc-body"><small>Il più semplice</small><h3>Assessment</h3><p>Aziende che vogliono capire dove e come introdurre la robotica nei propri processi.</p><ul><li>Mappatura dei processi</li><li>Fattibilità di ciascun caso d’uso</li><li>Roadmap con tempi e costi indicativi</li></ul><a class="btn pc-btn" href="#contatti" data-start="assessment">Richiedi un assessment</a></div></article><article class="pc pc-t"><div class="pc-img" style="background-image:url(images/official/unitree-a2-buio.webp)"></div><div class="pc-body"><small>Intermedio</small><h3>Affiancamento</h3><p>Team R&amp;D, Innovation e Automazione che vogliono sviluppare il progetto internamente e costruire competenze in azienda.</p><ul><li>Sviluppo del caso d’uso guidato da Abra</li><li>Formazione del team</li><li>Accesso ai nostri strumenti proprietari</li></ul><a class="btn pc-btn" href="#contatti" data-start="affiancamento">Prenota una call</a></div></article><article class="pc pc-t"><div class="pc-img" style="background-image:url(images/official/unitree-g1-dettaglio.webp)"></div><div class="pc-body"><small>Il più strutturato</small><h3>POC</h3><p>Aziende che hanno già individuato il caso d’uso e vogliono affidarne sviluppo e validazione.</p><ul><li>Sviluppo e validazione della soluzione</li><li>Simulazione in digital twin</li><li>Deployment in produzione con certificazione <span class="tbc" title="Il brief indica deployment e certificazione come non ancora dimostrati">Certificazione da validare</span></li></ul><a class="btn pc-btn" href="#contatti" data-start="poc">Prenota una call</a></div></article></div>
   </div>
 </section>
 <section id="software" class="pad-full">
@@ -1451,8 +1456,6 @@ main>section.sec-light+section.sec-light{padding-top:0!important}
         '<div class="f-visual" style="--img:url('+a.img+');aspect-ratio:500/400"><div class="stack case-stack">'+
         a.c.map(function(c){return '<div class="chip"><span>'+esc(c[0])+'</span><span class="tag'+tagCls[c[2]]+'">'+{Pronto:'In uso',Pilota:'In sperimentazione',Ricerca:'In sviluppo'}[c[2]]+'</span></div>'}).join('')+
         '</div></div><div><div class="tp-label">'+esc(a.n)+'</div><p class="tp-title">'+esc(a.d)+'</p>'+
-        '<p class="tp-desc">Robot tipici: '+esc(a.c.map(function(c){return c[1]}).filter(function(v,k,s){return s.indexOf(v)===k}).join(', '))+'.</p>'+
-        
         '<button class="btn btn-pill btn-light" type="button" data-open-quiz="'+esc(a.n)+'">Avvia la valutazione preliminare</button></div></div>';
     }).join('');
   }
